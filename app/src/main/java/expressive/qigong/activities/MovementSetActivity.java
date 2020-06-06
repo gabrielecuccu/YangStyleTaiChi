@@ -86,7 +86,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         if (status == TextToSpeech.SUCCESS) {
 
             int result = tts.setLanguage(Locale.UK);
-            tts.setSpeechRate(0.75f);
+            tts.setSpeechRate(1f);
 
             if (result == TextToSpeech.LANG_MISSING_DATA
                     || result == TextToSpeech.LANG_NOT_SUPPORTED) {
