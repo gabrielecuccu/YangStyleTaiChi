@@ -20,12 +20,12 @@ public class Random extends MovementSet {
         movs = movs.subList(0, 10);
 
         for (Movement mov : movs) {
-            add(new Movement(mov.getName() + " from " + mov.getSet(), getName()));
+            add(new Movement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
         }
     }
 
     @Override
     public String getName() {
-        return "Random";
+        return "Random Qigong";
     }
 }

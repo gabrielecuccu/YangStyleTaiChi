@@ -27,8 +27,9 @@ public class MovementSetActivity extends Activity {
         ((TextView) findViewById(R.id.movement_title)).setText(movementSet.getName());
 
         StringBuilder movementList = new StringBuilder();
+        int index = 1;
         for (Movement movement : movementSet) {
-            movementList.append(movement.getName()).append("\n");
+            movementList.append(index++ + ") " + movement.getName()).append("\n\n");
         }
         ((TextView) findViewById(R.id.movement_list)).setText(movementList.toString());
     }

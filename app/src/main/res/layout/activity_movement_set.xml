@@ -15,6 +15,7 @@
         android:textAlignment="center"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:layout_marginBottom="20dp"
         android:text="TextView" />
 
     <TextView
