@@ -30,6 +30,8 @@ public class MovementSetActivity extends Activity {
 
         ((TextView) findViewById(R.id.movement_title)).setText(movementSet.getName());
 
+        findViewById(R.id.back_button).setOnClickListener(view -> super.onBackPressed());
+
         StringBuilder movementList = new StringBuilder();
         int index = 1;
         for (Movement movement : movementSet) {
