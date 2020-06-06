@@ -50,6 +50,24 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
             "remember to seek stillness in movement"
     };
 
+    private String[] dantienSentences = new String[] {
+            "Close your eyes. Dantien breathing",
+            "Put your hands on your Dantien",
+            "Finish there. Dantien breating",
+            "Dantien breathing"
+    };
+
+    private String[] finishSentences = new String[] {
+            "Open your eyes. Thank you",
+            "Open your eyes. Finished",
+            "Open your eyes. Enjoy the rest of your day",
+            "Open your eyes. I hope you enjoyed this session",
+            "See you next time. Thank you",
+            "Finished. See you next time",
+            "Finished. Thank you.",
+            "Finished. Enjoy the rest of your day"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,9 +147,10 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
                     return;
                 }
 
+                int count = 0;
                 for (Movement mov : movementSet) {
                     // Say the movement name
-                    tts.speak(mov.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("number " + (++count) + ". " + mov.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
                     sleep(25000);
                     if (!speaking) {
                         stopSpeaking();
@@ -160,7 +179,9 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
                 }
 
                 // Say to dantien breathing
-                tts.speak("Dantien breathing", TextToSpeech.QUEUE_FLUSH, null, null);
+                int randomIndex = new Random().nextInt(dantienSentences.length);
+                String text = dantienSentences[randomIndex];
+                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(10000);
                 if (!speaking) {
                     stopSpeaking();
@@ -168,7 +189,9 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
                 }
 
                 // Say the set is finished
-                tts.speak("Open your eyes, enjoy the rest of your day", TextToSpeech.QUEUE_FLUSH, null, null);
+                randomIndex = new Random().nextInt(finishSentences.length);
+                text = finishSentences[randomIndex];
+                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(5000);
                 stopSpeaking();
             }
