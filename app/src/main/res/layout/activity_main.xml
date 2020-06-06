@@ -26,7 +26,7 @@
         android:background="#F6D55C"
         android:textColor="#594b16"
         android:textSize="18dp"
-        android:text="28 Step Qigong" />
+        android:text="28 Step Qi Gong" />
 
     <Button
         android:id="@+id/eight_breaths_button"
@@ -56,6 +56,6 @@
         android:background="#173F5F"
         android:textColor="#cfe4f5"
         android:textSize="18dp"
-        android:text="Random" />
+        android:text="Ten minutes Qi Gong" />
 
 </LinearLayout>

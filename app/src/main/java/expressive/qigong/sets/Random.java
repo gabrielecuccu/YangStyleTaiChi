@@ -26,6 +26,6 @@ public class Random extends MovementSet {
 
     @Override
     public String getName() {
-        return "Random Qigong";
+        return "Ten minutes Qi Gong";
     }
 }

@@ -30,6 +30,6 @@ public class TwoEightSteps extends MovementSet {
 
     @Override
     public String getName() {
-        return "28 Step Qigong";
+        return "28 Step Qi Gong";
     }
 }

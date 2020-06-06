@@ -10,7 +10,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.Locale;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,6 +30,13 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     private Timer timer;
 
     private boolean speaking = false;
+
+    private String[] lastRepetitionSentences = new String[] {
+            "ten more seconds",
+            "make this your last one",
+            "almost there",
+            "almost time for the next one"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +122,10 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
                         stopSpeaking();
                         return;
                     }
-                    tts.speak("ten more seconds", TextToSpeech.QUEUE_FLUSH, null, null);
+
+                    int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
+                    String text = lastRepetitionSentences[randomIndex];
+                    tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
                     sleep(10000);
                     if (!speaking) {
                         stopSpeaking();
