@@ -30,6 +30,14 @@
         android:layout_marginBottom="20dp"
         android:textSize="14dp" />
 
+    <ProgressBar
+        android:id="@+id/speak_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:indeterminate="true" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

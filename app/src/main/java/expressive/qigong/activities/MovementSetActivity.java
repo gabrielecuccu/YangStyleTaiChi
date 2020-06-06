@@ -4,11 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.text.method.ScrollingMovementMethod;
-import android.view.ActionMode;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -28,6 +27,8 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
 
     private Timer timer;
 
+    private boolean speaking = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         ((TextView) findViewById(R.id.movement_title)).setText(movementSet.getName());
 
         findViewById(R.id.back_button).setOnClickListener(view -> super.onBackPressed());
-        findViewById(R.id.speak_button).setOnClickListener(view -> speak());
+        findViewById(R.id.speak_button).setOnClickListener(view -> speakButtonClicked());
 
         // Create text
         StringBuilder movementList = new StringBuilder();
@@ -86,24 +87,70 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         }
     }
 
-    private void speak() {
+    private void speakButtonClicked() {
+        if (speaking) {
+            stopSpeaking();
+        } else {
+            startSpeaking();
+        }
+    }
+
+    private void startSpeaking() {
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 tts.speak(movementSet.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(2000);
+                if (!speaking) {
+                    stopSpeaking();
+                    return;
+                }
                 for (Movement mov : movementSet) {
                     tts.speak(mov.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
                     sleep(50000);
+                    if (!speaking) {
+                        stopSpeaking();
+                        return;
+                    }
                     tts.speak("ten more seconds", TextToSpeech.QUEUE_FLUSH, null, null);
                     sleep(10000);
+                    if (!speaking) {
+                        stopSpeaking();
+                        return;
+                    }
                 }
                 tts.speak("Dantien breathing", TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(10000);
+                if (!speaking) {
+                    stopSpeaking();
+                    return;
+                }
                 tts.speak("Open your eyes, enjoy the rest of your day", TextToSpeech.QUEUE_FLUSH, null, null);
+                sleep(5000);
+                stopSpeaking();
             }
         }, 100);
+
+        speaking = true;
+        ((Button) findViewById(R.id.speak_button)).setText("Stop");
+        findViewById(R.id.speak_progress).setVisibility(View.VISIBLE);
+
+    }
+
+    private void stopSpeaking() {
+        if (timer != null) {
+            timer.cancel();
+            timer.purge();
+        }
+
+        tts.stop();
+        speaking = false;
+
+        MovementSetActivity.this.runOnUiThread(() -> {
+            ((Button) findViewById(R.id.speak_button)).setText("Speak");
+            findViewById(R.id.speak_progress).setVisibility(View.GONE);
+        });
     }
 
     private void sleep(long millis) {
