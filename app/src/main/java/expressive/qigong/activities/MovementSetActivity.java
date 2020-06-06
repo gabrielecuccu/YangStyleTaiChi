@@ -44,12 +44,14 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         findViewById(R.id.back_button).setOnClickListener(view -> super.onBackPressed());
         findViewById(R.id.speak_button).setOnClickListener(view -> speak());
 
+        // Create text
         StringBuilder movementList = new StringBuilder();
         int index = 1;
         for (Movement movement : movementSet) {
             movementList.append(index++ + ") " + movement.getName()).append("\n\n");
         }
 
+        // Show text
         TextView movList = findViewById(R.id.movement_list);
         movList.setText(movementList.toString());
 
@@ -57,24 +59,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         movList.setMovementMethod(new ScrollingMovementMethod());
 
         // disable the copy and paste
-        movList.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
-
-            public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
-                return false;
-            }
-
-            public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
-                return false;
-            }
-
-            public boolean onActionItemClicked(ActionMode actionMode, MenuItem item) {
-                return false;
-            }
-
-            public void onDestroyActionMode(ActionMode actionMode) {
-            }
-        });
-
+        movList.setCustomSelectionActionModeCallback(new CustomActionMode());
         movList.setLongClickable(false);
         movList.setTextIsSelectable(false);
 
