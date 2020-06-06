@@ -1,6 +1,5 @@
 package expressive.qigong.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import expressive.qigong.R;
 import expressive.qigong.sets.EightBreaths;
 import expressive.qigong.sets.EightPieces;
@@ -8,12 +7,13 @@ import expressive.qigong.sets.FiveGates;
 import expressive.qigong.sets.Random;
 import expressive.qigong.sets.TwoEightSteps;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

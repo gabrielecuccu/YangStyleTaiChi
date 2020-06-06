@@ -1,18 +1,17 @@
 package expressive.qigong.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import expressive.qigong.movements.Movement;
-import expressive.qigong.movements.MovementSet;
-import expressive.qigong.movements.MovementSetFactory;
-import expressive.qigong.R;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.TextView;
 
-public class MovementSetActivity extends AppCompatActivity {
+import expressive.qigong.R;
+import expressive.qigong.movements.Movement;
+import expressive.qigong.movements.MovementSet;
+import expressive.qigong.movements.MovementSetFactory;
+
+public class MovementSetActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
