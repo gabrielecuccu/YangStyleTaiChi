@@ -3,6 +3,9 @@ package expressive.qigong.activities;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -32,7 +35,33 @@ public class MovementSetActivity extends Activity {
         for (Movement movement : movementSet) {
             movementList.append(index++ + ") " + movement.getName()).append("\n\n");
         }
-        ((TextView) findViewById(R.id.movement_list)).setText(movementList.toString());
-        ((TextView) findViewById(R.id.movement_list)).setMovementMethod(new ScrollingMovementMethod());
+
+        TextView movList = findViewById(R.id.movement_list);
+        movList.setText(movementList.toString());
+
+        // set the scrollbar
+        movList.setMovementMethod(new ScrollingMovementMethod());
+
+        // disable the copy and paste
+        movList.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+
+            public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+                return false;
+            }
+
+            public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+                return false;
+            }
+
+            public boolean onActionItemClicked(ActionMode actionMode, MenuItem item) {
+                return false;
+            }
+
+            public void onDestroyActionMode(ActionMode actionMode) {
+            }
+        });
+
+        movList.setLongClickable(false);
+        movList.setTextIsSelectable(false);
     }
 }
