@@ -13,6 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#ED553B"
+        android:textColor="#3e120b"
+        android:textSize="18dp"
         android:text="Eight pieces of silk brocade" />
 
     <Button
@@ -20,6 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#F6D55C"
+        android:textColor="#594b16"
+        android:textSize="18dp"
         android:text="28 Step Qigong" />
 
     <Button
@@ -27,6 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#3CAEA3"
+        android:textColor="#09312e"
+        android:textSize="18dp"
         android:text="Eight taiji breaths" />
 
     <Button
@@ -34,6 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#20639B"
+        android:textColor="#cfe4f5"
+        android:textSize="18dp"
         android:text="Five Gates Qi Gong" />
 
     <Button
@@ -41,6 +53,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#173F5F"
+        android:textColor="#cfe4f5"
+        android:textSize="18dp"
         android:text="Random" />
 
 </LinearLayout>
