@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".activities.MainActivity">
+
+    <Button
+        android:id="@+id/eight_pieces_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eight pieces of silk brocade" />
+
+    <Button
+        android:id="@+id/two_eight_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="28 Step Qigong" />
+
+    <Button
+        android:id="@+id/eight_breaths_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eight taiji breaths" />
+
+    <Button
+        android:id="@+id/five_gates_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Five Gates Qi Gong" />
+
+    <Button
+        android:id="@+id/random_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Random" />
+
+</LinearLayout>
