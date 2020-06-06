@@ -2,6 +2,7 @@ package expressive.qigong.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -32,5 +33,6 @@ public class MovementSetActivity extends Activity {
             movementList.append(index++ + ") " + movement.getName()).append("\n\n");
         }
         ((TextView) findViewById(R.id.movement_list)).setText(movementList.toString());
+        ((TextView) findViewById(R.id.movement_list)).setMovementMethod(new ScrollingMovementMethod());
     }
 }
