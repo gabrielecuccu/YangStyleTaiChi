@@ -30,10 +30,26 @@
         android:layout_marginBottom="20dp"
         android:textSize="14dp" />
 
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="Back" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/speak_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Speak"
+            android:textSize="18dp" />
+
+    </LinearLayout>
 </LinearLayout>
