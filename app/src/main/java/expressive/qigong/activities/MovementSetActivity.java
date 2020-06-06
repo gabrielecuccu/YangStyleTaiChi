@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Collections;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
@@ -36,6 +35,19 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
             "make this your last one",
             "almost there",
             "almost time for the next one"
+    };
+
+    private String[] tenPrinciples = new String[] {
+            "remember to suspend the head from the sky",
+            "remember to sink the chest, open the upper back",
+            "remember to loosen the waist",
+            "remember to sink the shoulders, drop the elbows",
+            "remember to distinguish between full and empty",
+            "remember to use will, not strength",
+            "remember to coordinate the upper and lower body",
+            "remember to unify external and internal movements",
+            "remember to unbroken continuity of flow",
+            "remember to seek stillness in movement"
     };
 
     @Override
@@ -109,21 +121,35 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+                // Say the set name
                 tts.speak(movementSet.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(2000);
                 if (!speaking) {
                     stopSpeaking();
                     return;
                 }
+
                 for (Movement mov : movementSet) {
+                    // Say the movement name
                     tts.speak(mov.getName(), TextToSpeech.QUEUE_FLUSH, null, null);
-                    sleep(50000);
+                    sleep(25000);
                     if (!speaking) {
                         stopSpeaking();
                         return;
                     }
 
-                    int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
+                    // Say a random principle
+                    int randomIndex = new Random().nextInt(tenPrinciples.length);
+                    String principle = tenPrinciples[randomIndex];
+                    tts.speak(principle, TextToSpeech.QUEUE_FLUSH, null, null);
+                    sleep(25000);
+                    if (!speaking) {
+                        stopSpeaking();
+                        return;
+                    }
+
+                    // Say it's almost time for the next movement
+                    randomIndex = new Random().nextInt(lastRepetitionSentences.length);
                     String text = lastRepetitionSentences[randomIndex];
                     tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
                     sleep(10000);
@@ -132,12 +158,16 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
                         return;
                     }
                 }
+
+                // Say to dantien breathing
                 tts.speak("Dantien breathing", TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(10000);
                 if (!speaking) {
                     stopSpeaking();
                     return;
                 }
+
+                // Say the set is finished
                 tts.speak("Open your eyes, enjoy the rest of your day", TextToSpeech.QUEUE_FLUSH, null, null);
                 sleep(5000);
                 stopSpeaking();
