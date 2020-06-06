@@ -46,7 +46,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
             "remember to use will, not strength",
             "remember to coordinate the upper and lower body",
             "remember to unify external and internal movements",
-            "remember to unbroken continuity of flow",
+            "remember the unbroken continuity of flow",
             "remember to seek stillness in movement"
     };
 
@@ -93,7 +93,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         if (status == TextToSpeech.SUCCESS) {
 
             int result = tts.setLanguage(Locale.UK);
-            tts.setSpeechRate(1f);
+            tts.setSpeechRate(0.85f);
 
             if (result == TextToSpeech.LANG_MISSING_DATA
                     || result == TextToSpeech.LANG_NOT_SUPPORTED) {
