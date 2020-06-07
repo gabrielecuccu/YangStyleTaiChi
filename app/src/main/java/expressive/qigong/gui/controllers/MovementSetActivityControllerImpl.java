@@ -20,6 +20,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
     private Timer timer;
 
+    private Thread currentSpeakingThread;
+
     private String[] lastRepetitionSentences = new String[] {
             "ten more seconds",
             "make this your last one",
@@ -107,11 +109,12 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+                currentSpeakingThread = Thread.currentThread();
+
                 // Say the set name
                 view.say(movementSet.getName());
                 sleep(2000);
                 if (!speaking) {
-                    stopSpeaking();
                     return;
                 }
 
@@ -121,7 +124,6 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     view.say("number " + (++count) + ". " + mov.getName());
                     sleep(25000);
                     if (!speaking) {
-                        stopSpeaking();
                         return;
                     }
 
@@ -131,7 +133,6 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     view.say(principle);
                     sleep(25000);
                     if (!speaking) {
-                        stopSpeaking();
                         return;
                     }
 
@@ -141,7 +142,6 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     view.say(text);
                     sleep(10000);
                     if (!speaking) {
-                        stopSpeaking();
                         return;
                     }
                 }
@@ -152,7 +152,6 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 view.say(text);
                 sleep(10000);
                 if (!speaking) {
-                    stopSpeaking();
                     return;
                 }
 
@@ -178,6 +177,10 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
         view.stopTTS();
         speaking = false;
+
+        if (currentSpeakingThread != null) {
+            currentSpeakingThread.interrupt();
+        }
 
         view.setSpeakButtonText("Speak");
         view.hideProgress();
