@@ -1,11 +1,10 @@
 package expressive.qigong.activities;
 
 import expressive.qigong.R;
-import expressive.qigong.sets.EightBreaths;
-import expressive.qigong.sets.EightPieces;
-import expressive.qigong.sets.FiveGates;
-import expressive.qigong.sets.Random;
-import expressive.qigong.sets.TwoEightSteps;
+import expressive.qigong.controllers.MainActivityDefaultController;
+import expressive.qigong.core.MainActivityController;
+import expressive.qigong.core.MainActivityView;
+import expressive.qigong.movements.MovementSet;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +12,9 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements MainActivityView {
+
+    private final MainActivityController controller = new MainActivityDefaultController(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +24,15 @@ public class MainActivity extends Activity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.eight_pieces_button).setOnClickListener(view -> buttonClicked(EightPieces.class));
-        findViewById(R.id.two_eight_button).setOnClickListener(view -> buttonClicked(TwoEightSteps.class));
-        findViewById(R.id.eight_breaths_button).setOnClickListener(view -> buttonClicked(EightBreaths.class));
-        findViewById(R.id.five_gates_button).setOnClickListener(view -> buttonClicked(FiveGates.class));
-        findViewById(R.id.random_button).setOnClickListener(view -> buttonClicked(Random.class));
+        findViewById(R.id.eight_pieces_button).setOnClickListener(view -> controller.eightPiecesClicked());
+        findViewById(R.id.two_eight_button).setOnClickListener(view -> controller.twoEightStepClicked());
+        findViewById(R.id.eight_breaths_button).setOnClickListener(view -> controller.eightBreathClicked());
+        findViewById(R.id.five_gates_button).setOnClickListener(view -> controller.fiveGatesClicked());
+        findViewById(R.id.random_button).setOnClickListener(view -> controller.randomClicked());
     }
 
-    private void buttonClicked(Class clazz) {
+    @Override
+    public void startMovementSetActivity(Class<? extends MovementSet> clazz) {
         Intent intent = new Intent(this, MovementSetActivity.class);
         intent.putExtra("set", clazz.getCanonicalName());
         startActivity(intent);
