@@ -8,11 +8,11 @@ import expressive.qigong.sets.FiveGates;
 import expressive.qigong.sets.Random;
 import expressive.qigong.sets.TwoEightSteps;
 
-public class MainActivityDefaultController implements MainActivityController {
+public class MainActivityControllerImpl implements MainActivityController {
 
     private MainActivityView view;
 
-    public MainActivityDefaultController(MainActivityView view) {
+    public MainActivityControllerImpl(MainActivityView view) {
         this.view = view;
     }
 

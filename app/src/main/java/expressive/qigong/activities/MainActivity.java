@@ -1,7 +1,7 @@
 package expressive.qigong.activities;
 
 import expressive.qigong.R;
-import expressive.qigong.controllers.MainActivityDefaultController;
+import expressive.qigong.controllers.MainActivityControllerImpl;
 import expressive.qigong.core.MainActivityController;
 import expressive.qigong.core.MainActivityView;
 import expressive.qigong.movements.MovementSet;
@@ -14,7 +14,7 @@ import android.view.WindowManager;
 
 public class MainActivity extends Activity implements MainActivityView {
 
-    private final MainActivityController controller = new MainActivityDefaultController(this);
+    private final MainActivityController controller = new MainActivityControllerImpl(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,7 +10,7 @@ import expressive.qigong.movements.Movement;
 import expressive.qigong.movements.MovementSet;
 import expressive.qigong.movements.MovementSetFactory;
 
-public class MovementSetActivityDefaultController implements MovementSetActivityController {
+public class MovementSetActivityControllerImpl implements MovementSetActivityController {
 
     private MovementSetActivityView view;
 
@@ -58,7 +58,7 @@ public class MovementSetActivityDefaultController implements MovementSetActivity
             "Finished. Enjoy the rest of your day"
     };
 
-    public MovementSetActivityDefaultController(MovementSetActivityView view) {
+    public MovementSetActivityControllerImpl(MovementSetActivityView view) {
         this.view = view;
     }
 

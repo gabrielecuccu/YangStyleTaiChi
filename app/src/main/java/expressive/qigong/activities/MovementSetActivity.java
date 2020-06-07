@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 import expressive.qigong.R;
-import expressive.qigong.controllers.MovementSetActivityDefaultController;
+import expressive.qigong.controllers.MovementSetActivityControllerImpl;
 import expressive.qigong.core.MovementSetActivityController;
 import expressive.qigong.core.MovementSetActivityView;
 
@@ -21,7 +21,7 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
 
     private TextToSpeech tts;
 
-    private final MovementSetActivityController controller = new MovementSetActivityDefaultController(this);
+    private final MovementSetActivityController controller = new MovementSetActivityControllerImpl(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
