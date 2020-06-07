@@ -1,12 +1,12 @@
-package expressive.qigong.controllers;
+package expressive.qigong.gui.controllers;
 
-import expressive.qigong.core.MainActivityController;
-import expressive.qigong.core.MainActivityView;
-import expressive.qigong.sets.EightBreaths;
-import expressive.qigong.sets.EightPieces;
-import expressive.qigong.sets.FiveGates;
-import expressive.qigong.sets.Random;
-import expressive.qigong.sets.TwoEightSteps;
+import expressive.qigong.gui.core.MainActivityController;
+import expressive.qigong.gui.core.MainActivityView;
+import expressive.qigong.core.sets.EightBreaths;
+import expressive.qigong.core.sets.EightPieces;
+import expressive.qigong.core.sets.FiveGates;
+import expressive.qigong.core.sets.Random;
+import expressive.qigong.core.sets.TwoEightSteps;
 
 public class MainActivityControllerImpl implements MainActivityController {
 

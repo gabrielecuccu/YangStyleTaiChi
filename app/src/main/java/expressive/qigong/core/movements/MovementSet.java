@@ -1,4 +1,4 @@
-package expressive.qigong.movements;
+package expressive.qigong.core.movements;
 
 import java.util.ArrayList;
 

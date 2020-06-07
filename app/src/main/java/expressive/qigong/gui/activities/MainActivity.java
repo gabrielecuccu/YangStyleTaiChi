@@ -1,10 +1,10 @@
-package expressive.qigong.activities;
+package expressive.qigong.gui.activities;
 
 import expressive.qigong.R;
-import expressive.qigong.controllers.MainActivityControllerImpl;
-import expressive.qigong.core.MainActivityController;
-import expressive.qigong.core.MainActivityView;
-import expressive.qigong.movements.MovementSet;
+import expressive.qigong.gui.controllers.MainActivityControllerImpl;
+import expressive.qigong.gui.core.MainActivityController;
+import expressive.qigong.gui.core.MainActivityView;
+import expressive.qigong.core.movements.MovementSet;
 
 import android.app.Activity;
 import android.content.Intent;

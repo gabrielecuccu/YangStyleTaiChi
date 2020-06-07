@@ -1,4 +1,4 @@
-package expressive.qigong.activities;
+package expressive.qigong.gui.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 import java.util.Locale;
 
 import expressive.qigong.R;
-import expressive.qigong.controllers.MovementSetActivityControllerImpl;
-import expressive.qigong.core.MovementSetActivityController;
-import expressive.qigong.core.MovementSetActivityView;
+import expressive.qigong.gui.controllers.MovementSetActivityControllerImpl;
+import expressive.qigong.gui.core.MovementSetActivityController;
+import expressive.qigong.gui.core.MovementSetActivityView;
 
 public class MovementSetActivity extends Activity implements TextToSpeech.OnInitListener, MovementSetActivityView {
 

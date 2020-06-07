@@ -1,4 +1,4 @@
-package expressive.qigong.activities;
+package expressive.qigong.gui.activities;
 
 import android.view.ActionMode;
 import android.view.Menu;

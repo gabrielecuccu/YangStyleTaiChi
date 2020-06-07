@@ -1,4 +1,4 @@
-package expressive.qigong.core;
+package expressive.qigong.gui.core;
 
 public interface MainActivityController {
     void eightPiecesClicked();

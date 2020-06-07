@@ -1,14 +1,14 @@
-package expressive.qigong.controllers;
+package expressive.qigong.gui.controllers;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import expressive.qigong.core.MovementSetActivityController;
-import expressive.qigong.core.MovementSetActivityView;
-import expressive.qigong.movements.Movement;
-import expressive.qigong.movements.MovementSet;
-import expressive.qigong.movements.MovementSetFactory;
+import expressive.qigong.gui.core.MovementSetActivityController;
+import expressive.qigong.gui.core.MovementSetActivityView;
+import expressive.qigong.core.movements.Movement;
+import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.MovementSetFactory;
 
 public class MovementSetActivityControllerImpl implements MovementSetActivityController {
 

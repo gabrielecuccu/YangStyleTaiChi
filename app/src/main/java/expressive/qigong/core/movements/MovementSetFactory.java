@@ -1,10 +1,10 @@
-package expressive.qigong.movements;
+package expressive.qigong.core.movements;
 
-import expressive.qigong.sets.EightBreaths;
-import expressive.qigong.sets.EightPieces;
-import expressive.qigong.sets.FiveGates;
-import expressive.qigong.sets.Random;
-import expressive.qigong.sets.TwoEightSteps;
+import expressive.qigong.core.sets.EightBreaths;
+import expressive.qigong.core.sets.EightPieces;
+import expressive.qigong.core.sets.FiveGates;
+import expressive.qigong.core.sets.Random;
+import expressive.qigong.core.sets.TwoEightSteps;
 
 public class MovementSetFactory {
     private final static MovementSetFactory instance = new MovementSetFactory();

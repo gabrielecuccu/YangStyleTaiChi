@@ -1,4 +1,4 @@
-package expressive.qigong.movements;
+package expressive.qigong.core.movements;
 
 public class Movement {
     private String name;

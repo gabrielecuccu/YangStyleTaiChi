@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    tools:context=".activities.MovementSetActivity">
+    tools:context=".gui.activities.MovementSetActivity">
 
     <TextView
         android:id="@+id/movement_title"

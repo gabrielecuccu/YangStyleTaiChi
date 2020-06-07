@@ -1,11 +1,11 @@
-package expressive.qigong.sets;
+package expressive.qigong.core.sets;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import expressive.qigong.movements.Movement;
-import expressive.qigong.movements.MovementSet;
+import expressive.qigong.core.movements.Movement;
+import expressive.qigong.core.movements.MovementSet;
 
 public class Random extends MovementSet {
 
