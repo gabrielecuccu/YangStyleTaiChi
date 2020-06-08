@@ -1,6 +1,7 @@
 package expressive.qigong.core.movements;
 
 import expressive.qigong.core.sets.BasicStances;
+import expressive.qigong.core.sets.Coiling;
 import expressive.qigong.core.sets.EightBreaths;
 import expressive.qigong.core.sets.EightPieces;
 import expressive.qigong.core.sets.FiveElementsBreathing;
@@ -23,9 +24,11 @@ public class MovementSetFactory {
             return new EightBreaths();
         } else if (TwoEightSteps.class.getCanonicalName().equals(name)) {
             return new TwoEightSteps();
-        }  else if (FiveGates.class.getCanonicalName().equals(name)) {
+        } else if (FiveGates.class.getCanonicalName().equals(name)) {
             return new FiveGates();
-        } else if (Random.class.getCanonicalName().equals(name)) {
+        } else if (Coiling.class.getCanonicalName().equals(name)) {
+            return new Coiling();
+        }  else if (Random.class.getCanonicalName().equals(name)) {
             return new Random();
         } else if (TenPrinciples.class.getCanonicalName().equals(name)) {
             return new TenPrinciples();

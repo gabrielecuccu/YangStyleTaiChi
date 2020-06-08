@@ -9,4 +9,5 @@ public interface MainActivityController {
     void tenPrinciplesClicked();
     void fiveElementsClicked();
     void basicStancesClicked();
+    void coilingClicked();
 }
