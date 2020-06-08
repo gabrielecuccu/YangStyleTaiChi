@@ -51,6 +51,8 @@
             android:background="#20639B"
             android:textColor="#cfe4f5"
             android:layout_margin="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Back"
             android:textSize="18dp" />
 
@@ -62,6 +64,8 @@
             android:background="#20639B"
             android:textColor="#cfe4f5"
             android:layout_margin="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Speak"
             android:textSize="18dp" />
 
