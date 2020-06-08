@@ -2,6 +2,7 @@ package expressive.qigong.core.movements;
 
 import expressive.qigong.core.sets.EightBreaths;
 import expressive.qigong.core.sets.EightPieces;
+import expressive.qigong.core.sets.FiveElementsBreathing;
 import expressive.qigong.core.sets.FiveGates;
 import expressive.qigong.core.sets.Random;
 import expressive.qigong.core.sets.TenPrinciples;
@@ -27,6 +28,8 @@ public class MovementSetFactory {
             return new Random();
         } else if (TenPrinciples.class.getCanonicalName().equals(name)) {
             return new TenPrinciples();
+        } else if (FiveElementsBreathing.class.getCanonicalName().equals(name)) {
+            return new FiveElementsBreathing();
         }  else {
             return null;
         }

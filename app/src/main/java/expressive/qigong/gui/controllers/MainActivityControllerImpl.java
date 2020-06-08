@@ -1,5 +1,6 @@
 package expressive.qigong.gui.controllers;
 
+import expressive.qigong.core.sets.FiveElementsBreathing;
 import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.gui.core.MainActivityController;
 import expressive.qigong.gui.core.MainActivityView;
@@ -45,5 +46,10 @@ public class MainActivityControllerImpl implements MainActivityController {
     @Override
     public void tenPrinciplesClicked() {
         view.startMovementSetActivity(TenPrinciples.class);
+    }
+
+    @Override
+    public void fiveElementsClicked() {
+        view.startMovementSetActivity(FiveElementsBreathing.class);
     }
 }

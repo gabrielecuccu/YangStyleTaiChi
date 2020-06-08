@@ -30,6 +30,7 @@ public class MainActivity extends Activity implements MainActivityView {
         findViewById(R.id.five_gates_button).setOnClickListener(view -> controller.fiveGatesClicked());
         findViewById(R.id.random_button).setOnClickListener(view -> controller.randomClicked());
         findViewById(R.id.ten_principles_button).setOnClickListener(view -> controller.tenPrinciplesClicked());
+        findViewById(R.id.five_elements_breathing_button).setOnClickListener(view -> controller.fiveElementsClicked());
     }
 
     @Override
