@@ -10,4 +10,5 @@ public interface MainActivityController {
     void fiveElementsClicked();
     void basicStancesClicked();
     void coilingClicked();
+    void blackDragonClicked();
 }

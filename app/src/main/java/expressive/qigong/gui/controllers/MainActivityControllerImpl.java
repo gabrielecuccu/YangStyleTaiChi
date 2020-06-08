@@ -1,6 +1,7 @@
 package expressive.qigong.gui.controllers;
 
 import expressive.qigong.core.sets.BasicStances;
+import expressive.qigong.core.sets.BlackDragonBodyWave;
 import expressive.qigong.core.sets.Coiling;
 import expressive.qigong.core.sets.FiveElementsBreathing;
 import expressive.qigong.core.sets.TenPrinciples;
@@ -63,5 +64,10 @@ public class MainActivityControllerImpl implements MainActivityController {
     @Override
     public void coilingClicked() {
         view.startMovementSetActivity(Coiling.class);
+    }
+
+    @Override
+    public void blackDragonClicked() {
+        view.startMovementSetActivity(BlackDragonBodyWave.class);
     }
 }
