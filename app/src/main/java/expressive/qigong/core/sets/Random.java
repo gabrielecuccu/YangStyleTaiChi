@@ -15,6 +15,8 @@ public class Random extends MovementSet {
         movs.addAll(new EightPieces());
         movs.addAll(new EightBreaths());
         movs.addAll(new TwoEightSteps());
+        movs.addAll(new FiveGates());
+        movs.addAll(new FiveElementsBreathing());
 
         Collections.shuffle(movs);
         movs = movs.subList(0, 10);
