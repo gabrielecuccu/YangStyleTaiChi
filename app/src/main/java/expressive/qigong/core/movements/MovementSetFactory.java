@@ -1,5 +1,6 @@
 package expressive.qigong.core.movements;
 
+import expressive.qigong.core.sets.BasicStances;
 import expressive.qigong.core.sets.EightBreaths;
 import expressive.qigong.core.sets.EightPieces;
 import expressive.qigong.core.sets.FiveElementsBreathing;
@@ -30,6 +31,8 @@ public class MovementSetFactory {
             return new TenPrinciples();
         } else if (FiveElementsBreathing.class.getCanonicalName().equals(name)) {
             return new FiveElementsBreathing();
+        } else if (BasicStances.class.getCanonicalName().equals(name)) {
+            return new BasicStances();
         }  else {
             return null;
         }

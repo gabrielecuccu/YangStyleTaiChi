@@ -8,4 +8,5 @@ public interface MainActivityController {
     void randomClicked();
     void tenPrinciplesClicked();
     void fiveElementsClicked();
+    void basicStancesClicked();
 }

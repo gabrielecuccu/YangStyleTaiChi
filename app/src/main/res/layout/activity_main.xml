@@ -78,4 +78,14 @@
         android:textSize="18dp"
         android:text="Five elements breathing" />
 
+    <Button
+        android:id="@+id/basic_stances_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#173F5F"
+        android:textColor="#cfe4f5"
+        android:textSize="18dp"
+        android:text="Basic stances" />
+
 </LinearLayout>
