@@ -8,6 +8,7 @@ import expressive.qigong.core.sets.EightPieces;
 import expressive.qigong.core.sets.FiveElementsBreathing;
 import expressive.qigong.core.sets.FiveGates;
 import expressive.qigong.core.sets.Random;
+import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.core.sets.TwoEightSteps;
 
@@ -39,7 +40,9 @@ public class MovementSetFactory {
             return new FiveElementsBreathing();
         } else if (BasicStances.class.getCanonicalName().equals(name)) {
             return new BasicStances();
-        }  else {
+        } else if (ShortForm.class.getCanonicalName().equals(name)) {
+            return new ShortForm();
+        } else {
             return null;
         }
     }
