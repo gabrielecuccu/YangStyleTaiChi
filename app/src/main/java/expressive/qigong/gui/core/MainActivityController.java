@@ -13,4 +13,6 @@ public interface MainActivityController {
     void blackDragonClicked();
     void shortFormClicked();
     void sabreFormClicked();
+    void narrowSwordFormClicked();
+    void fanFormClicked();
 }

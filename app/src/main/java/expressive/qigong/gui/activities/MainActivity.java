@@ -36,6 +36,8 @@ public class MainActivity extends Activity implements MainActivityView {
         findViewById(R.id.basic_stances_button).setOnClickListener(view -> controller.basicStancesClicked());
         findViewById(R.id.short_form_button).setOnClickListener(view -> controller.shortFormClicked());
         findViewById(R.id.sabre_form_button).setOnClickListener(view -> controller.sabreFormClicked());
+        findViewById(R.id.narrow_sword_form_button).setOnClickListener(view -> controller.narrowSwordFormClicked());
+        findViewById(R.id.fan_form_button).setOnClickListener(view -> controller.fanFormClicked());
     }
 
     @Override

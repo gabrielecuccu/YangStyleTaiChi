@@ -3,7 +3,9 @@ package expressive.qigong.gui.controllers;
 import expressive.qigong.core.sets.BasicStances;
 import expressive.qigong.core.sets.BlackDragonBodyWave;
 import expressive.qigong.core.sets.Coiling;
+import expressive.qigong.core.sets.FanForm;
 import expressive.qigong.core.sets.FiveElementsBreathing;
+import expressive.qigong.core.sets.NarrowSwordForm;
 import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
@@ -81,5 +83,15 @@ public class MainActivityControllerImpl implements MainActivityController {
     @Override
     public void sabreFormClicked() {
         view.startMovementSetActivity(SabreForm.class);
+    }
+
+    @Override
+    public void narrowSwordFormClicked() {
+        view.startMovementSetActivity(NarrowSwordForm.class);
+    }
+
+    @Override
+    public void fanFormClicked() {
+        view.startMovementSetActivity(FanForm.class);
     }
 }

@@ -5,8 +5,10 @@ import expressive.qigong.core.sets.BlackDragonBodyWave;
 import expressive.qigong.core.sets.Coiling;
 import expressive.qigong.core.sets.EightBreaths;
 import expressive.qigong.core.sets.EightPieces;
+import expressive.qigong.core.sets.FanForm;
 import expressive.qigong.core.sets.FiveElementsBreathing;
 import expressive.qigong.core.sets.FiveGates;
+import expressive.qigong.core.sets.NarrowSwordForm;
 import expressive.qigong.core.sets.Random;
 import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
@@ -45,6 +47,10 @@ public class MovementSetFactory {
             return new ShortForm();
         } else if (SabreForm.class.getCanonicalName().equals(name)) {
             return new SabreForm();
+        } else if (NarrowSwordForm.class.getCanonicalName().equals(name)) {
+            return new NarrowSwordForm();
+        } else if (FanForm.class.getCanonicalName().equals(name)) {
+            return new FanForm();
         } else {
             return null;
         }
