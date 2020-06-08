@@ -12,4 +12,5 @@ public interface MainActivityController {
     void coilingClicked();
     void blackDragonClicked();
     void shortFormClicked();
+    void sabreFormClicked();
 }
