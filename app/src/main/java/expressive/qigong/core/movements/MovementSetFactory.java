@@ -4,6 +4,7 @@ import expressive.qigong.core.sets.EightBreaths;
 import expressive.qigong.core.sets.EightPieces;
 import expressive.qigong.core.sets.FiveGates;
 import expressive.qigong.core.sets.Random;
+import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.core.sets.TwoEightSteps;
 
 public class MovementSetFactory {
@@ -24,6 +25,8 @@ public class MovementSetFactory {
             return new FiveGates();
         } else if (Random.class.getCanonicalName().equals(name)) {
             return new Random();
+        } else if (TenPrinciples.class.getCanonicalName().equals(name)) {
+            return new TenPrinciples();
         }  else {
             return null;
         }

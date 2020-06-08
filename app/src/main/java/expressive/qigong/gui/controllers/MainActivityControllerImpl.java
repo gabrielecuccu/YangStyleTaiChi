@@ -1,5 +1,6 @@
 package expressive.qigong.gui.controllers;
 
+import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.gui.core.MainActivityController;
 import expressive.qigong.gui.core.MainActivityView;
 import expressive.qigong.core.sets.EightBreaths;
@@ -39,5 +40,10 @@ public class MainActivityControllerImpl implements MainActivityController {
     @Override
     public void randomClicked() {
         view.startMovementSetActivity(Random.class);
+    }
+
+    @Override
+    public void tenPrinciplesClicked() {
+        view.startMovementSetActivity(TenPrinciples.class);
     }
 }

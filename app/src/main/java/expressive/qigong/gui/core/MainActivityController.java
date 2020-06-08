@@ -6,4 +6,5 @@ public interface MainActivityController {
     void fiveGatesClicked();
     void twoEightStepClicked();
     void randomClicked();
+    void tenPrinciplesClicked();
 }
