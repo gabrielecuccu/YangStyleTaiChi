@@ -17,4 +17,9 @@ public class FiveElementsBreathing extends MovementSet {
     public String getName() {
         return "Five elements breathing";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

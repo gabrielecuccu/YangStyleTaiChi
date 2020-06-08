@@ -36,4 +36,9 @@ public class ShortForm extends MovementSet {
     public String getName() {
         return "Short form";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

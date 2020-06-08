@@ -19,4 +19,6 @@ public interface MovementSetActivityView {
     void say(String sentence);
 
     void shutdownTTS();
+
+    void hideSpeakButton();
 }

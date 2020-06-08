@@ -20,4 +20,9 @@ public class BasicStances extends MovementSet {
     public String getName() {
         return "Basic Stances";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

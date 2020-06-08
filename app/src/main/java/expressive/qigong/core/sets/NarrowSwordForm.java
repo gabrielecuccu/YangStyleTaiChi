@@ -66,4 +66,9 @@ public class NarrowSwordForm extends MovementSet {
     public String getName() {
         return "Narrow sword form";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

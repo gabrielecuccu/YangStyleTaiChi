@@ -122,4 +122,9 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
             tts.shutdown();
         }
     }
+
+    @Override
+    public void hideSpeakButton() {
+        findViewById(R.id.speak_button).setVisibility(View.INVISIBLE);
+    }
 }

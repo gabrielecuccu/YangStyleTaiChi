@@ -24,4 +24,9 @@ public class Coiling extends MovementSet {
     public String getName() {
         return "Coiling Qi Gong";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }

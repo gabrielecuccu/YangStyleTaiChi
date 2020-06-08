@@ -30,4 +30,9 @@ public class Random extends MovementSet {
     public String getName() {
         return "Ten minutes Qi Gong";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }

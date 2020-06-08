@@ -17,4 +17,9 @@ public class FiveGates extends MovementSet {
     public String getName() {
         return "Five Gates Qi Gong";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }

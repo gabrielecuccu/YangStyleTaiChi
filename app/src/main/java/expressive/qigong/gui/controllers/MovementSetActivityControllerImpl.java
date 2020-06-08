@@ -84,6 +84,9 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
         }
 
         view.showMovementSet(movementList.toString());
+        if (!movementSet.canSpeak()) {
+            view.hideSpeakButton();
+        }
     }
 
     @Override

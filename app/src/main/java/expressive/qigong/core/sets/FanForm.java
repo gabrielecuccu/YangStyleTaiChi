@@ -48,4 +48,9 @@ public class FanForm extends MovementSet {
     public String getName() {
         return "Fan form";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

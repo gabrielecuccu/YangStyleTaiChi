@@ -16,4 +16,9 @@ public class BlackDragonBodyWave extends MovementSet {
     public String getName() {
         return "Black dragon body wave Qi Gong";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }

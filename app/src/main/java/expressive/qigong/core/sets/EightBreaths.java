@@ -20,4 +20,9 @@ public class EightBreaths extends MovementSet {
     public String getName() {
         return "Eight taiji breaths";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }

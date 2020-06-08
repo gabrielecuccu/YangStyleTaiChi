@@ -39,4 +39,9 @@ public class SabreForm extends MovementSet {
     public String getName() {
         return "Sabre form";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

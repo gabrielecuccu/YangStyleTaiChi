@@ -22,4 +22,9 @@ public class TenPrinciples extends MovementSet {
     public String getName() {
         return "The ten principles";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

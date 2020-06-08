@@ -32,4 +32,9 @@ public class TwoEightSteps extends MovementSet {
     public String getName() {
         return "28 Step Qi Gong";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return false;
+    }
 }

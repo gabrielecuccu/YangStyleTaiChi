@@ -20,4 +20,9 @@ public class EightPieces extends MovementSet {
     public String getName() {
         return "Eight pieces of silk brocade";
     }
+
+    @Override
+    public boolean canSpeak() {
+        return true;
+    }
 }
