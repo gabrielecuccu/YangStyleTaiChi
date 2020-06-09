@@ -159,4 +159,9 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         String duration = PreferenceManager.getDefaultSharedPreferences(this).getString("RANDOM_DURATION", "60");
         return Integer.parseInt(duration);
     }
+
+    @Override
+    public boolean getSuggestTenPrinciples() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("SUGGEST_TEN_PRINCIPLES", false);
+    }
 }

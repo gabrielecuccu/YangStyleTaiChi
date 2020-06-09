@@ -119,6 +119,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
     private void startSpeaking() {
         int movementDuration = view.getMovementDuration() * 1000;
         int halfMovementDuration = (movementDuration - 10000) / 2;
+
+        boolean suggestTenPrinciples = view.getSuggestTenPrinciples();
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -127,7 +129,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
                 // Say the set name
                 view.say(movementSet.getName());
-                sleep(2000);
+                sleep(3000);
                 if (!speaking) {
                     return;
                 }
@@ -142,16 +144,19 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     }
 
                     // Say a random principle
-                    int randomIndex = new Random().nextInt(tenPrinciples.length);
-                    String principle = tenPrinciples[randomIndex];
-                    view.say(principle);
+                    if (suggestTenPrinciples) {
+                        int randomIndex = new Random().nextInt(tenPrinciples.length);
+                        String principle = tenPrinciples[randomIndex];
+                        view.say(principle);
+                    }
+
                     sleep(halfMovementDuration);
                     if (!speaking) {
                         return;
                     }
 
                     // Say it's almost time for the next movement
-                    randomIndex = new Random().nextInt(lastRepetitionSentences.length);
+                    int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
                     String text = lastRepetitionSentences[randomIndex];
                     view.say(text);
                     sleep(10000);
