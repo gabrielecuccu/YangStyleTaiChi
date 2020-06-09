@@ -12,6 +12,7 @@ public class Random extends MovementSet {
     public Random() {
 
         List<Movement> movs = new ArrayList<>();
+        movs.addAll(new WarmUp());
         movs.addAll(new EightPieces());
         movs.addAll(new EightBreaths());
         movs.addAll(new TwoEightSteps());
