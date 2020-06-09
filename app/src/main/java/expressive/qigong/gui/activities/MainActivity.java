@@ -24,6 +24,7 @@ public class MainActivity extends Activity implements MainActivityView {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.warm_up_button).setOnClickListener(view -> controller.warmUpClicked());
         findViewById(R.id.eight_pieces_button).setOnClickListener(view -> controller.eightPiecesClicked());
         findViewById(R.id.two_eight_button).setOnClickListener(view -> controller.twoEightStepClicked());
         findViewById(R.id.eight_breaths_button).setOnClickListener(view -> controller.eightBreathClicked());

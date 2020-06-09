@@ -1,6 +1,7 @@
 package expressive.qigong.gui.core;
 
 public interface MainActivityController {
+    void warmUpClicked();
     void eightPiecesClicked();
     void eightBreathClicked();
     void fiveGatesClicked();

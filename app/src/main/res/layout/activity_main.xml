@@ -9,6 +9,17 @@
     tools:context=".gui.activities.MainActivity">
 
     <Button
+        android:id="@+id/warm_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:layout_weight="1"
+        android:background="#ED553B"
+        android:textColor="#3e120b"
+        android:textSize="18dp"
+        android:text="Warm up exercises" />
+
+    <Button
         android:id="@+id/eight_pieces_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

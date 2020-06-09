@@ -14,6 +14,7 @@ import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.core.sets.TwoEightSteps;
+import expressive.qigong.core.sets.WarmUp;
 
 public class MovementSetFactory {
     private final static MovementSetFactory instance = new MovementSetFactory();
@@ -23,7 +24,9 @@ public class MovementSetFactory {
     }
 
     public MovementSet getMovementSet(String name) {
-        if (EightPieces.class.getCanonicalName().equals(name)) {
+        if (WarmUp.class.getCanonicalName().equals(name)) {
+            return new WarmUp();
+        } else if (EightPieces.class.getCanonicalName().equals(name)) {
             return new EightPieces();
         } else if (EightBreaths.class.getCanonicalName().equals(name)) {
             return new EightBreaths();

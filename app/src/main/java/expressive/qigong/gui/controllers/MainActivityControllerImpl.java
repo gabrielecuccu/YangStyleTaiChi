@@ -9,6 +9,7 @@ import expressive.qigong.core.sets.NarrowSwordForm;
 import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
+import expressive.qigong.core.sets.WarmUp;
 import expressive.qigong.gui.core.MainActivityController;
 import expressive.qigong.gui.core.MainActivityView;
 import expressive.qigong.core.sets.EightBreaths;
@@ -23,6 +24,11 @@ public class MainActivityControllerImpl implements MainActivityController {
 
     public MainActivityControllerImpl(MainActivityView view) {
         this.view = view;
+    }
+
+    @Override
+    public void warmUpClicked() {
+        view.startMovementSetActivity(WarmUp.class);
     }
 
     @Override
