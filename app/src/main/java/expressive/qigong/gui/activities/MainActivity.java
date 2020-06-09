@@ -1,18 +1,20 @@
 package expressive.qigong.gui.activities;
 
-import expressive.qigong.R;
-import expressive.qigong.gui.controllers.MainActivityControllerImpl;
-import expressive.qigong.gui.core.MainActivityController;
-import expressive.qigong.gui.core.MainActivityView;
-import expressive.qigong.core.movements.MovementSet;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity implements MainActivityView {
+import androidx.appcompat.app.AppCompatActivity;
+import expressive.qigong.R;
+import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.gui.controllers.MainActivityControllerImpl;
+import expressive.qigong.gui.core.MainActivityController;
+import expressive.qigong.gui.core.MainActivityView;
+
+public class MainActivity extends AppCompatActivity implements MainActivityView {
 
     private final MainActivityController controller = new MainActivityControllerImpl(this);
 
@@ -23,6 +25,8 @@ public class MainActivity extends Activity implements MainActivityView {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        setSupportActionBar(findViewById(R.id.toolbar));
 
         findViewById(R.id.warm_up_button).setOnClickListener(view -> controller.warmUpClicked());
         findViewById(R.id.eight_pieces_button).setOnClickListener(view -> controller.eightPiecesClicked());
@@ -39,6 +43,13 @@ public class MainActivity extends Activity implements MainActivityView {
         findViewById(R.id.sabre_form_button).setOnClickListener(view -> controller.sabreFormClicked());
         findViewById(R.id.narrow_sword_form_button).setOnClickListener(view -> controller.narrowSwordFormClicked());
         findViewById(R.id.fan_form_button).setOnClickListener(view -> controller.fanFormClicked());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
