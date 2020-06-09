@@ -22,10 +22,6 @@
                 app:key="ADD_BLACK_DRAGON_TO_RANDOM"
                 app:title="Add Black Dragon Body Wave" />
 
-            <SwitchPreferenceCompat
-                app:key="ADD_FIVE_ELEMENTS_TO_RANDOM"
-                app:title="Add Five Elements Breathing exercises" />
-
         </PreferenceCategory>
 
 </PreferenceScreen>
