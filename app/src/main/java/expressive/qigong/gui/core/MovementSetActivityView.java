@@ -32,4 +32,5 @@ public interface MovementSetActivityView {
 
     boolean getIncludeBlackDragon();
 
+    int getMovementDuration();
 }

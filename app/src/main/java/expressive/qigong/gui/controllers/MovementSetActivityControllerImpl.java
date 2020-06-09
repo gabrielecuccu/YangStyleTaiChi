@@ -117,6 +117,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
     }
 
     private void startSpeaking() {
+        int movementDuration = view.getMovementDuration() * 1000;
+        int halfMovementDuration = (movementDuration - 10000) / 2;
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -134,7 +136,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 for (Movement mov : movementSet) {
                     // Say the movement name
                     view.say("number " + (++count) + ". " + mov.getName());
-                    sleep(25000);
+                    sleep(halfMovementDuration);
                     if (!speaking) {
                         return;
                     }
@@ -143,7 +145,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     int randomIndex = new Random().nextInt(tenPrinciples.length);
                     String principle = tenPrinciples[randomIndex];
                     view.say(principle);
-                    sleep(25000);
+                    sleep(halfMovementDuration);
                     if (!speaking) {
                         return;
                     }

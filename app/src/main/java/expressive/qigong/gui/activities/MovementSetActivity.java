@@ -153,4 +153,10 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     public boolean getIncludeBlackDragon() {
         return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_BLACK_DRAGON_TO_RANDOM", false);
     }
+
+    @Override
+    public int getMovementDuration() {
+        String duration = PreferenceManager.getDefaultSharedPreferences(this).getString("RANDOM_DURATION", "60");
+        return Integer.parseInt(duration);
+    }
 }

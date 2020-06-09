@@ -2,6 +2,16 @@
 
         <PreferenceCategory app:title="10 minutes Qi Gong">
 
+            <ListPreference
+                app:dialogTitle="Ten minutes Qi Gong duration"
+                app:entries="@array/durations_names"
+                app:entryValues="@array/durations_values"
+                app:key="RANDOM_DURATION"
+                app:negativeButtonText="@null"
+                app:positiveButtonText="@null"
+                app:summary="%s"
+                app:title="Duration of each movement" />
+
             <SwitchPreferenceCompat
                 app:key="ADD_WARM_UP_TO_RANDOM"
                 app:title="Add Warm Up exercises" />
