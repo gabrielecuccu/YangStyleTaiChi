@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class EightBreaths extends MovementSet {
+public class EightBreaths extends SimpleMovementSet {
 
     public EightBreaths() {
         add(new Movement("Heaven and earth", getName()));

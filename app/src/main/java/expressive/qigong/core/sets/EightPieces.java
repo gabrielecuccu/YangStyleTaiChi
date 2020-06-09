@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class EightPieces extends MovementSet {
+public class EightPieces extends SimpleMovementSet {
 
     public EightPieces() {
         add(new Movement("Reach to the sky", getName()));

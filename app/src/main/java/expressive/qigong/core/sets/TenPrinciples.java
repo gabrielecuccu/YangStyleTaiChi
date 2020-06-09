@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class TenPrinciples extends MovementSet {
+public class TenPrinciples extends SimpleMovementSet {
 
     public TenPrinciples() {
         add(new Movement("Suspend the head from the sky", getName()));

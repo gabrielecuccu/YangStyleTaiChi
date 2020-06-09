@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class BlackDragonBodyWave extends MovementSet {
+public class BlackDragonBodyWave extends SimpleMovementSet {
 
     public BlackDragonBodyWave() {
         add(new Movement("Dragon swims in the ocean", getName()));

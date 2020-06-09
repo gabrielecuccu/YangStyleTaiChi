@@ -72,6 +72,15 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
     @Override
     public void processIntentExtra(String set) {
         movementSet = MovementSetFactory.getInstance().getMovementSet(set);
+        if (movementSet.requiresSettings()) {
+            movementSet
+                    .includeWarmUp(view.getIncludeWarmUp())
+                    .includeFiveGates(view.getIncludeFiveGates())
+                    .includeFiveElements(view.getIncludeFiveElements())
+                    .includeCoiling(view.getIncludeCoiling())
+                    .includeBlackDragon(view.getIncludeBlackDragon());
+        }
+        movementSet.build();
         view.setTitle(movementSet.getName());
     }
 

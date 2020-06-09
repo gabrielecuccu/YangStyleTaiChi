@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class Coiling extends MovementSet {
+public class Coiling extends SimpleMovementSet {
 
     public Coiling() {
         add(new Movement("Yin Yang Hands", getName()));

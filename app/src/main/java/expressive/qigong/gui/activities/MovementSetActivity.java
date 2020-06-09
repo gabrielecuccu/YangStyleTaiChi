@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+import androidx.preference.PreferenceManager;
 import expressive.qigong.R;
 import expressive.qigong.gui.controllers.MovementSetActivityControllerImpl;
 import expressive.qigong.gui.core.MovementSetActivityController;
@@ -126,5 +127,30 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     @Override
     public void hideSpeakButton() {
         findViewById(R.id.speak_button).setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public boolean getIncludeWarmUp() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_WARM_UP_TO_RANDOM", false);
+    }
+
+    @Override
+    public boolean getIncludeFiveGates() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_FIVE_GATES_TO_RANDOM", false);
+    }
+
+    @Override
+    public boolean getIncludeFiveElements() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_FIVE_ELEMENTS_TO_RANDOM", false);
+    }
+
+    @Override
+    public boolean getIncludeCoiling() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_COILING_TO_RANDOM", false);
+    }
+
+    @Override
+    public boolean getIncludeBlackDragon() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_BLACK_DRAGON_TO_RANDOM", false);
     }
 }

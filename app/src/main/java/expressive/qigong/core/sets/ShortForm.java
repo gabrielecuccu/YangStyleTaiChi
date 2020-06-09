@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class ShortForm extends MovementSet {
+public class ShortForm extends SimpleMovementSet {
 
     public ShortForm() {
         add(new Movement("Opening the Form", getName()));

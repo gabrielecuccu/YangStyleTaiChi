@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class WarmUp extends MovementSet {
+public class WarmUp extends SimpleMovementSet {
 
     public WarmUp() {
         add(new Movement("Swinging arms", getName()));

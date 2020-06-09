@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class FiveElementsBreathing extends MovementSet {
+public class FiveElementsBreathing extends SimpleMovementSet {
 
     public FiveElementsBreathing() {
         add(new Movement("Earth (nose, nose)", getName()));

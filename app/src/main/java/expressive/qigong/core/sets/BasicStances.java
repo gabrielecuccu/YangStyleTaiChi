@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class BasicStances extends MovementSet {
+public class BasicStances extends SimpleMovementSet {
 
     public BasicStances() {
         add(new Movement("Taiji Stance", getName()));

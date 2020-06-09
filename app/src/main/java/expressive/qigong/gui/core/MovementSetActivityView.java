@@ -21,4 +21,15 @@ public interface MovementSetActivityView {
     void shutdownTTS();
 
     void hideSpeakButton();
+
+    boolean getIncludeWarmUp();
+
+    boolean getIncludeFiveGates();
+
+    boolean getIncludeFiveElements();
+
+    boolean getIncludeCoiling();
+
+    boolean getIncludeBlackDragon();
+
 }

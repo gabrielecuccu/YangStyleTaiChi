@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class SabreForm extends MovementSet {
+public class SabreForm extends SimpleMovementSet {
 
     public SabreForm() {
         add(new Movement("Opening the Form", getName()));

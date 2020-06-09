@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class FanForm extends MovementSet {
+public class FanForm extends SimpleMovementSet {
 
     public FanForm() {
         add(new Movement("Opening the form", getName()));

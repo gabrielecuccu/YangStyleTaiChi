@@ -9,22 +9,18 @@ import expressive.qigong.core.movements.MovementSet;
 
 public class Random extends MovementSet {
 
+    private boolean includeWarmUp = false;
+
+    private boolean includeFiveGates = false;
+
+    private boolean includeFiveElements = false;
+
+    private boolean includeCoiling = false;
+
+    private boolean includeBlackDragon = false;
+
     public Random() {
 
-        List<Movement> movs = new ArrayList<>();
-        movs.addAll(new WarmUp());
-        movs.addAll(new EightPieces());
-        movs.addAll(new EightBreaths());
-        movs.addAll(new TwoEightSteps());
-        movs.addAll(new FiveGates());
-        movs.addAll(new FiveElementsBreathing());
-
-        Collections.shuffle(movs);
-        movs = movs.subList(0, 10);
-
-        for (Movement mov : movs) {
-            add(new Movement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
-        }
     }
 
     @Override
@@ -35,5 +31,75 @@ public class Random extends MovementSet {
     @Override
     public boolean canSpeak() {
         return true;
+    }
+
+    @Override
+    public boolean requiresSettings() {
+        return true;
+    }
+
+    @Override
+    public MovementSet includeWarmUp(boolean include) {
+        this.includeWarmUp = include;
+        return this;
+    }
+
+    @Override
+    public MovementSet includeFiveGates(boolean include) {
+        this.includeFiveGates = include;
+        return this;
+    }
+
+    @Override
+    public MovementSet includeFiveElements(boolean include) {
+        this.includeFiveElements = include;
+        return this;
+    }
+
+    @Override
+    public MovementSet includeCoiling(boolean include) {
+        this.includeCoiling = include;
+        return this;
+    }
+
+    @Override
+    public MovementSet includeBlackDragon(boolean include) {
+        this.includeBlackDragon = include;
+        return this;
+    }
+
+    @Override
+    public void build() {
+        List<Movement> movs = new ArrayList<>();
+        if (includeWarmUp) {
+            movs.addAll(new WarmUp());
+        }
+
+        if (includeFiveGates) {
+            movs.addAll(new FiveGates());
+        }
+
+        if (includeFiveElements) {
+            movs.addAll(new FiveElementsBreathing());
+        }
+
+        if (includeCoiling) {
+            movs.addAll(new Coiling());
+        }
+
+        if (includeBlackDragon) {
+            movs.addAll(new BlackDragonBodyWave());
+        }
+
+        movs.addAll(new EightPieces());
+        movs.addAll(new EightBreaths());
+        movs.addAll(new TwoEightSteps());
+
+        Collections.shuffle(movs);
+        movs = movs.subList(0, 10);
+
+        for (Movement mov : movs) {
+            add(new Movement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+        }
     }
 }

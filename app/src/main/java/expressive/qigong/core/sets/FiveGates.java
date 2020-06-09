@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class FiveGates extends MovementSet {
+public class FiveGates extends SimpleMovementSet {
 
     public FiveGates() {
         add(new Movement("Neck", getName()));

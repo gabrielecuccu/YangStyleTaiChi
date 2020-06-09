@@ -1,9 +1,9 @@
 package expressive.qigong.core.sets;
 
 import expressive.qigong.core.movements.Movement;
-import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.SimpleMovementSet;
 
-public class NarrowSwordForm extends MovementSet {
+public class NarrowSwordForm extends SimpleMovementSet {
 
     public NarrowSwordForm() {
         add(new Movement("Opening the form", getName()));
