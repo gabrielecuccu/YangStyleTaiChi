@@ -78,7 +78,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     .includeFiveGates(view.getIncludeFiveGates())
                     .includeFiveElements(view.getIncludeFiveElements())
                     .includeCoiling(view.getIncludeCoiling())
-                    .includeBlackDragon(view.getIncludeBlackDragon());
+                    .includeBlackDragon(view.getIncludeBlackDragon())
+                    .setNumberOfMovements(view.getNumberOfMovements());
         }
         movementSet.build();
         view.setTitle(movementSet.getName());

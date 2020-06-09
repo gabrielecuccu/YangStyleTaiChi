@@ -31,6 +31,11 @@ public abstract class SimpleMovementSet extends MovementSet {
         return null;
     }
 
+    @Override
+    public MovementSet setNumberOfMovements(int i) {
+        return null;
+    }
+
     public void build() {
 
     }

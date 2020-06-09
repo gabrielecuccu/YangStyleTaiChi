@@ -9,4 +9,16 @@
         <item>90</item>
         <item>120</item>
     </string-array>
+    <string-array name="number_of_movements_names">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="number_of_movements_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
 </resources>

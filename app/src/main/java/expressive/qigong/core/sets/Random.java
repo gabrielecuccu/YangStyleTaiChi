@@ -19,6 +19,8 @@ public class Random extends MovementSet {
 
     private boolean includeBlackDragon = false;
 
+    private int numberOfMovements = 10;
+
     public Random() {
 
     }
@@ -69,6 +71,12 @@ public class Random extends MovementSet {
     }
 
     @Override
+    public MovementSet setNumberOfMovements(int numberOfMovements) {
+        this.numberOfMovements = numberOfMovements;
+        return this;
+    }
+
+    @Override
     public void build() {
         List<Movement> movs = new ArrayList<>();
         if (includeWarmUp) {
@@ -96,7 +104,7 @@ public class Random extends MovementSet {
         movs.addAll(new TwoEightSteps());
 
         Collections.shuffle(movs);
-        movs = movs.subList(0, 10);
+        movs = movs.subList(0, numberOfMovements);
 
         for (Movement mov : movs) {
             add(new Movement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));

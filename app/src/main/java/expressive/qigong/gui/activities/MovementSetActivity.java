@@ -164,4 +164,10 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     public boolean getSuggestTenPrinciples() {
         return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("SUGGEST_TEN_PRINCIPLES", false);
     }
+
+    @Override
+    public int getNumberOfMovements() {
+        String number = PreferenceManager.getDefaultSharedPreferences(this).getString("RANDOM_NUMBER_OF_MOVEMENTS", "10");
+        return Integer.parseInt(number);
+    }
 }

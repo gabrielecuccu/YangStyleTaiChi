@@ -35,4 +35,6 @@ public interface MovementSetActivityView {
     int getMovementDuration();
 
     boolean getSuggestTenPrinciples();
+
+    int getNumberOfMovements();
 }

@@ -20,5 +20,7 @@ public abstract class MovementSet extends ArrayList<Movement> {
 
     public abstract MovementSet includeBlackDragon(boolean b);
 
+    public abstract MovementSet setNumberOfMovements(int i);
+
     public abstract void build();
 }
