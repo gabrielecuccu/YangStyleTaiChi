@@ -8,10 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
-        <activity android:name=".gui.activities.MovementSetActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".gui.activities.MainActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <activity
+            android:name=".gui.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity
+            android:name=".gui.activities.MovementSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gui.activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

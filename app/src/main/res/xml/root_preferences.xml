@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <PreferenceCategory app:title="10 minutes Qi Gong">
+
+            <SwitchPreferenceCompat
+                app:key="ADD_WARM_UP_TO_RANDOM"
+                app:title="Add Warm Up exercises" />
+
+            <SwitchPreferenceCompat
+                app:key="ADD_FIVE_GATES_TO_RANDOM"
+                app:title="Add Five Gates" />
+
+            <SwitchPreferenceCompat
+                app:key="ADD_FIVE_ELEMENTS_TO_RANDOM"
+                app:title="Add Five Elements Breathing" />
+
+            <SwitchPreferenceCompat
+                app:key="ADD_COILING_TO_RANDOM"
+                app:title="Add Coiling Qi Gong" />
+
+            <SwitchPreferenceCompat
+                app:key="ADD_BLACK_DRAGON_TO_RANDOM"
+                app:title="Add Black Dragon Body Wave" />
+
+            <SwitchPreferenceCompat
+                app:key="ADD_FIVE_ELEMENTS_TO_RANDOM"
+                app:title="Add Five Elements Breathing exercises" />
+
+        </PreferenceCategory>
+
+</PreferenceScreen>

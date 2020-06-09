@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Yang Style Tai Chi</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 </resources>
