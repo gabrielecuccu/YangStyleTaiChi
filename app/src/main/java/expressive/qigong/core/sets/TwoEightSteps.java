@@ -35,6 +35,6 @@ public class TwoEightSteps extends SimpleMovementSet {
 
     @Override
     public boolean canSpeak() {
-        return false;
+        return true;
     }
 }

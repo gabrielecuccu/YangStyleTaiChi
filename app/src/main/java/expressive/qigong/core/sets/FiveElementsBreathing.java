@@ -20,6 +20,6 @@ public class FiveElementsBreathing extends SimpleMovementSet {
 
     @Override
     public boolean canSpeak() {
-        return false;
+        return true;
     }
 }
