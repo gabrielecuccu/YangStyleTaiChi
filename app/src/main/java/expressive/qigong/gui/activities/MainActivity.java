@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import expressive.qigong.R;
 import expressive.qigong.core.movements.MovementSet;
@@ -59,6 +60,16 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         switch (item.getItemId()) {
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+            case R.id.action_about:
+                // 1. Instantiate an <code><a href="/reference/android/app/AlertDialog.Builder.html">AlertDialog.Builder</a></code> with its constructor
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder.setMessage(R.string.about_dialog_text)
+                        .setTitle(R.string.about_dialog_title);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
