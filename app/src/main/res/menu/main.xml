@@ -4,6 +4,7 @@
         android:title="Settings"/>
 
     <item android:id="@+id/action_about"
+        android:visible="false"
         android:title="About"/>
 
 </menu>
