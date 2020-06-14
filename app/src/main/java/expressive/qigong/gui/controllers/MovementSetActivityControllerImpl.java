@@ -24,9 +24,10 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
     private String[] lastRepetitionSentences = new String[] {
             "ten more seconds",
-            "make this your last one",
+            "a few more repetitions",
             "almost there",
-            "almost time for the next one"
+            "almost time for the next one",
+            "make the last few repetitions"
     };
 
     private String[] tenPrinciples = new String[] {
