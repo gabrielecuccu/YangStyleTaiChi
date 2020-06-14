@@ -1,15 +1,15 @@
 package expressive.qigong.core.sets;
 
-import expressive.qigong.core.movements.Movement;
+import expressive.qigong.core.movements.LongerMovement;
 import expressive.qigong.core.movements.SimpleMovementSet;
 
 public class Walking extends SimpleMovementSet {
 
     public Walking() {
-        add(new Movement("Part the wild horse's mane", getName()));
-        add(new Movement("Stretch the heel", getName()));
-        add(new Movement("Back-stepping monkey", getName()));
-        add(new Movement("Circle punching", getName()));
+        add(new LongerMovement("Part the wild horse's mane", getName()));
+        add(new LongerMovement("Stretch the heel", getName()));
+        add(new LongerMovement("Back-stepping monkey", getName()));
+        add(new LongerMovement("Circle punching", getName()));
     }
 
     @Override

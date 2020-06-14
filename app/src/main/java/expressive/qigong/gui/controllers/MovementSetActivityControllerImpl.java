@@ -140,7 +140,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 for (Movement mov : movementSet) {
                     // Say the movement name
                     view.say("number " + (++count) + ". " + mov.getName());
-                    sleep(halfMovementDuration);
+                    sleep((int) (halfMovementDuration * mov.getDuration()));
                     if (!speaking) {
                         return;
                     }
@@ -152,7 +152,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                         view.say(principle);
                     }
 
-                    sleep(halfMovementDuration);
+                    sleep((int) (halfMovementDuration * mov.getDuration()));
                     if (!speaking) {
                         return;
                     }

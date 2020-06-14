@@ -1,19 +1,19 @@
 package expressive.qigong.core.sets;
 
-import expressive.qigong.core.movements.Movement;
+import expressive.qigong.core.movements.StandardMovement;
 import expressive.qigong.core.movements.SimpleMovementSet;
 
 public class BasicStances extends SimpleMovementSet {
 
     public BasicStances() {
-        add(new Movement("Taiji Stance", getName()));
-        add(new Movement("Hanging Stance", getName()));
-        add(new Movement("Bow stance / gōngbù", getName()));
-        add(new Movement("Snake stance", getName()));
-        add(new Movement("Taming the Tiger Stance", getName()));
-        add(new Movement("Snake Creeps Down", getName()));
-        add(new Movement("Golden Cockerel Stands On One Leg", getName()));
-        add(new Movement("Horse Riding Stance", getName()));
+        add(new StandardMovement("Taiji Stance", getName()));
+        add(new StandardMovement("Hanging Stance", getName()));
+        add(new StandardMovement("Bow stance / gōngbù", getName()));
+        add(new StandardMovement("Snake stance", getName()));
+        add(new StandardMovement("Taming the Tiger Stance", getName()));
+        add(new StandardMovement("Snake Creeps Down", getName()));
+        add(new StandardMovement("Golden Cockerel Stands On One Leg", getName()));
+        add(new StandardMovement("Horse Riding Stance", getName()));
     }
 
     @Override

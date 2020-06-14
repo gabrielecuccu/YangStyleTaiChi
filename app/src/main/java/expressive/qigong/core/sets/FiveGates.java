@@ -1,16 +1,17 @@
 package expressive.qigong.core.sets;
 
-import expressive.qigong.core.movements.Movement;
+import expressive.qigong.core.movements.ShorterMovement;
 import expressive.qigong.core.movements.SimpleMovementSet;
+import expressive.qigong.core.movements.StandardMovement;
 
 public class FiveGates extends SimpleMovementSet {
 
     public FiveGates() {
-        add(new Movement("Neck", getName()));
-        add(new Movement("Shoulders", getName()));
-        add(new Movement("Hip rotation", getName()));
-        add(new Movement("Knee rotation", getName()));
-        add(new Movement("Ankle rotation", getName()));
+        add(new StandardMovement("Neck", getName()));
+        add(new StandardMovement("Shoulders", getName()));
+        add(new ShorterMovement("Hip rotation", getName()));
+        add(new ShorterMovement("Knee rotation", getName()));
+        add(new StandardMovement("Ankle rotation", getName()));
     }
 
     @Override

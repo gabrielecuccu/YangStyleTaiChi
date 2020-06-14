@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import expressive.qigong.core.movements.LongerMovement;
 import expressive.qigong.core.movements.Movement;
 import expressive.qigong.core.movements.MovementSet;
+import expressive.qigong.core.movements.ShorterMovement;
+import expressive.qigong.core.movements.StandardMovement;
 
 public class Random extends MovementSet {
 
@@ -107,7 +110,13 @@ public class Random extends MovementSet {
         movs = movs.subList(0, numberOfMovements);
 
         for (Movement mov : movs) {
-            add(new Movement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+            if (mov instanceof ShorterMovement) {
+                add(new ShorterMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+            } else if (mov instanceof LongerMovement) {
+                add(new LongerMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+            } else {
+                add(new StandardMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+            }
         }
     }
 }

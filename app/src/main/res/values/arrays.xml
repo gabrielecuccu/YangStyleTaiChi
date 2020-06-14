@@ -1,8 +1,8 @@
 <resources>
     <string-array name="durations_names">
-        <item>short (60 seconds)</item>
-        <item>medium (90 seconds)</item>
-        <item>long (120 seconds)</item>
+        <item>short (around 60 seconds)</item>
+        <item>medium (around 90 seconds)</item>
+        <item>long (around 120 seconds)</item>
     </string-array>
     <string-array name="durations_values">
         <item>60</item>
