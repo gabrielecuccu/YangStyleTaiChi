@@ -14,6 +14,7 @@ import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
 import expressive.qigong.core.sets.TwoEightSteps;
+import expressive.qigong.core.sets.Walking;
 import expressive.qigong.core.sets.WarmUp;
 
 public class MovementSetFactory {
@@ -34,6 +35,8 @@ public class MovementSetFactory {
             return new TwoEightSteps();
         } else if (FiveGates.class.getCanonicalName().equals(name)) {
             return new FiveGates();
+        } else if (Walking.class.getCanonicalName().equals(name)) {
+            return new Walking();
         } else if (Coiling.class.getCanonicalName().equals(name)) {
             return new Coiling();
         } else if (BlackDragonBodyWave.class.getCanonicalName().equals(name)) {

@@ -9,6 +9,7 @@ import expressive.qigong.core.sets.NarrowSwordForm;
 import expressive.qigong.core.sets.SabreForm;
 import expressive.qigong.core.sets.ShortForm;
 import expressive.qigong.core.sets.TenPrinciples;
+import expressive.qigong.core.sets.Walking;
 import expressive.qigong.core.sets.WarmUp;
 import expressive.qigong.gui.core.MainActivityController;
 import expressive.qigong.gui.core.MainActivityView;
@@ -49,6 +50,11 @@ public class MainActivityControllerImpl implements MainActivityController {
     @Override
     public void twoEightStepClicked() {
         view.startMovementSetActivity(TwoEightSteps.class);
+    }
+
+    @Override
+    public void walkingClicked() {
+        view.startMovementSetActivity(Walking.class);
     }
 
     @Override

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         findViewById(R.id.two_eight_button).setOnClickListener(view -> controller.twoEightStepClicked());
         findViewById(R.id.eight_breaths_button).setOnClickListener(view -> controller.eightBreathClicked());
         findViewById(R.id.five_gates_button).setOnClickListener(view -> controller.fiveGatesClicked());
+        findViewById(R.id.walking_button).setOnClickListener(view -> controller.walkingClicked());
         findViewById(R.id.coiling_button).setOnClickListener(view -> controller.coilingClicked());
         findViewById(R.id.black_dragon_button).setOnClickListener(view -> controller.blackDragonClicked());
         findViewById(R.id.random_button).setOnClickListener(view -> controller.randomClicked());

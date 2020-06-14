@@ -84,6 +84,17 @@
         android:text="Five elements breathing" />
 
     <Button
+        android:id="@+id/walking_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:layout_weight="1"
+        android:background="#ED553B"
+        android:textColor="#3e120b"
+        android:textSize="18dp"
+        android:text="Walking Qi Gong" />
+
+    <Button
         android:id="@+id/coiling_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
