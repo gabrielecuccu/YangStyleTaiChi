@@ -12,7 +12,7 @@ public class WarmUp extends SimpleMovementSet {
         add(new LongerMovement("Yang swimming dragon", getName()));
         add(new LongerMovement("Catherine Wheels", getName()));
         add(new ShorterMovement("Support the Sky", getName()));
-        add(new LongerMovement("Fishes in Eight", getName()));
+        add(new LongerMovement("Fishes in Eight", getName(), "change direction if you haven't yet"));
         add(new LongerMovement("Iron Butterfly", getName()));
     }
 

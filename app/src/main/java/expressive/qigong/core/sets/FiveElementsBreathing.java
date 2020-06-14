@@ -6,10 +6,10 @@ import expressive.qigong.core.movements.SimpleMovementSet;
 public class FiveElementsBreathing extends SimpleMovementSet {
 
     public FiveElementsBreathing() {
-        add(new LongerMovement("Earth (nose, nose)", getName()));
-        add(new LongerMovement("Water (nose, mouth)", getName()));
-        add(new LongerMovement("Fire (mouth, nose)", getName()));
-        add(new LongerMovement("Air (Metal) (mouth, mouth)", getName()));
+        add(new LongerMovement("Earth (nose, nose)", getName(), "remember to breathe in and out through the nose, eyes closed"));
+        add(new LongerMovement("Water (nose, mouth)", getName(), "remember to breathe in through the nose, and out through the mouth, eyes closed"));
+        add(new LongerMovement("Fire (mouth, nose)", getName(), "remember to breathe in through the mouth, and out through the nose, eyes closed"));
+        add(new LongerMovement("Air (Metal) (mouth, mouth)", getName(), "remember to breathe in and out through the mouth, eyes closed"));
         add(new LongerMovement("Wood", getName()));
     }
 

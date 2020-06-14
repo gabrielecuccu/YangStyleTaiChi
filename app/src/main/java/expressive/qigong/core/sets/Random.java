@@ -111,11 +111,11 @@ public class Random extends MovementSet {
 
         for (Movement mov : movs) {
             if (mov instanceof ShorterMovement) {
-                add(new ShorterMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+                add(new ShorterMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName(), mov.getHint()));
             } else if (mov instanceof LongerMovement) {
-                add(new LongerMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+                add(new LongerMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName(), mov.getHint()));
             } else {
-                add(new StandardMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName()));
+                add(new StandardMovement("From " + mov.getSet() + ":\n" + mov.getName() + "\n", getName(), mov.getHint()));
             }
         }
     }

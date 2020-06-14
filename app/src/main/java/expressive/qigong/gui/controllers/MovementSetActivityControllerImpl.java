@@ -146,7 +146,9 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     }
 
                     // Say a random principle
-                    if (suggestTenPrinciples) {
+                    if (mov.hasHint()) {
+                        view.say(mov.getHint());
+                    } else if (suggestTenPrinciples) {
                         int randomIndex = new Random().nextInt(tenPrinciples.length);
                         String principle = tenPrinciples[randomIndex];
                         view.say(principle);

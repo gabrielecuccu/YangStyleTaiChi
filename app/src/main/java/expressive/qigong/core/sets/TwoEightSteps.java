@@ -16,13 +16,13 @@ public class TwoEightSteps extends SimpleMovementSet {
         add(new StandardMovement("Turning the body to gaze at the moon", getName()));
         add(new StandardMovement("Pushing the palms", getName()));
         add(new StandardMovement("Hands moving in the clouds", getName()));
-        add(new StandardMovement("Dredging the ocean and looking at the sky", getName()));
+        add(new StandardMovement("Dredging the ocean and looking at the sky", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Regulate the Qi with upward and downward movements", getName()));
-        add(new StandardMovement("Pushing the waves", getName()));
+        add(new StandardMovement("Pushing the waves", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Soothe the chest and abdomen with Qi", getName()));
-        add(new StandardMovement("Flying white dove", getName()));
+        add(new StandardMovement("Flying white dove", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Twin dragons coil around the pillar", getName()));
-        add(new StandardMovement("Grasp the sparrow’s tail while warding off the tiger", getName()));
+        add(new StandardMovement("Grasp the sparrow’s tail while warding off the tiger", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Lifting and filling with Qi", getName()));
         add(new StandardMovement("Closing the palms", getName()));
         add(new StandardMovement("Charging the fists", getName()));
