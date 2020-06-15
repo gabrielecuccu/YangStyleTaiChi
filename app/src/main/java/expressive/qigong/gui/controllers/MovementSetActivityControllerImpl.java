@@ -173,7 +173,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 int randomIndex = new Random().nextInt(dantienSentences.length);
                 String text = dantienSentences[randomIndex];
                 view.say(text);
-                sleep(10000);
+                sleep(15000);
                 if (!speaking) {
                     return;
                 }

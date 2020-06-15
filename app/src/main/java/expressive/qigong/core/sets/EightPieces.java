@@ -14,7 +14,7 @@ public class EightPieces extends SimpleMovementSet {
         add(new StandardMovement("Willow cools its leaves in the stream", getName()));
         add(new ShorterMovement("White crane washes its wings", getName()));
         add(new StandardMovement("Punching the air", getName()));
-        add(new ShorterMovement("Shaking the tail-feathers", getName()));
+        add(new ShorterMovement("Shaking the tail-feathers", getName(), "remember to breath softly through the nose"));
     }
 
     @Override

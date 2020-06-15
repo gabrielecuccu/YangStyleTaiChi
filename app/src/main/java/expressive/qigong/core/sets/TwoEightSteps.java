@@ -1,5 +1,6 @@
 package expressive.qigong.core.sets;
 
+import expressive.qigong.core.movements.ShorterMovement;
 import expressive.qigong.core.movements.StandardMovement;
 import expressive.qigong.core.movements.SimpleMovementSet;
 
@@ -21,7 +22,7 @@ public class TwoEightSteps extends SimpleMovementSet {
         add(new StandardMovement("Pushing the waves", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Soothe the chest and abdomen with Qi", getName()));
         add(new StandardMovement("Flying white dove", getName(), "change direction if you haven't yet"));
-        add(new StandardMovement("Twin dragons coil around the pillar", getName()));
+        add(new ShorterMovement("Twin dragons coil around the pillar", getName()));
         add(new StandardMovement("Grasp the sparrow’s tail while warding off the tiger", getName(), "change direction if you haven't yet"));
         add(new StandardMovement("Lifting and filling with Qi", getName()));
         add(new StandardMovement("Closing the palms", getName()));
