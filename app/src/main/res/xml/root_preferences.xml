@@ -3,7 +3,7 @@
     <PreferenceCategory app:title="General">
 
         <ListPreference
-            app:dialogTitle="Ten minutes Qi Gong duration"
+            app:dialogTitle="Duration of each movement"
             app:entries="@array/durations_names"
             app:entryValues="@array/durations_values"
             app:key="RANDOM_DURATION"
