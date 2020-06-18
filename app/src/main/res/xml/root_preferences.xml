@@ -7,6 +7,7 @@
             app:entries="@array/durations_names"
             app:entryValues="@array/durations_values"
             app:key="RANDOM_DURATION"
+            app:defaultValue="90"
             app:negativeButtonText="@null"
             app:positiveButtonText="@null"
             app:summary="%s"
@@ -14,7 +15,8 @@
 
         <SwitchPreferenceCompat
             app:key="SUGGEST_TEN_PRINCIPLES"
-            app:title="Suggest ten principles" />
+            app:title="Suggest ten principles"
+            app:defaultValue="true"/>
 
     </PreferenceCategory>
 
@@ -27,6 +29,7 @@
             app:key="RANDOM_NUMBER_OF_MOVEMENTS"
             app:negativeButtonText="@null"
             app:positiveButtonText="@null"
+            app:defaultValue="10"
             app:summary="%s"
             app:title="Number of movements" />
 
@@ -36,18 +39,22 @@
 
         <SwitchPreferenceCompat
             app:key="ADD_FIVE_GATES_TO_RANDOM"
+            app:defaultValue="false"
             app:title="Add Five Gates" />
 
         <SwitchPreferenceCompat
             app:key="ADD_FIVE_ELEMENTS_TO_RANDOM"
+            app:defaultValue="false"
             app:title="Add Five Elements Breathing" />
 
         <SwitchPreferenceCompat
             app:key="ADD_COILING_TO_RANDOM"
+            app:defaultValue="false"
             app:title="Add Coiling Qi Gong" />
 
         <SwitchPreferenceCompat
             app:key="ADD_BLACK_DRAGON_TO_RANDOM"
+            app:defaultValue="false"
             app:title="Add Black Dragon Body Wave" />
 
     </PreferenceCategory>
