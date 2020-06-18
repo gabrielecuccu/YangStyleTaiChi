@@ -18,6 +18,11 @@
             app:title="Suggest ten principles"
             app:defaultValue="true"/>
 
+        <SwitchPreferenceCompat
+            app:key="ADD_WARM_UP_TO_ALL_SETS"
+            app:defaultValue="false"
+            app:title="Add 2 Warm Up exercises before sets" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="10 minutes Qi Gong">

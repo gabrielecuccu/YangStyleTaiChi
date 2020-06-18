@@ -22,6 +22,14 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
     private Thread currentSpeakingThread;
 
+    private String[] warmUps = new String[] {
+            "Yin swimming dragon",
+            "Yang swimming dragon",
+            "Catherine Wheels",
+            "Support the Sky",
+            "Fishes in Eight"
+    };
+
     private String[] lastRepetitionSentences = new String[] {
             "ten more seconds",
             "a few more repetitions",
@@ -123,6 +131,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
         int halfMovementDuration = (movementDuration - 10000) / 2;
 
         boolean suggestTenPrinciples = view.getSuggestTenPrinciples();
+        boolean addWarmUp = view.getAddWarmUpToAllSets();
+
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -134,6 +144,34 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 sleep(3000);
                 if (!speaking) {
                     return;
+                }
+
+                if (addWarmUp) {
+                    view.say("Let's start with some warm up exercises");
+                    sleep(3000);
+                    if (!speaking) {
+                        return;
+                    }
+
+                    view.say("As usual, let's start with swinging arms");
+                    sleep(movementDuration);
+                    if (!speaking) {
+                        return;
+                    }
+
+                    int randomIndex = new Random().nextInt(warmUps.length);
+                    String text = warmUps[randomIndex];
+                    view.say("When you are ready, switch to " + text);
+                    sleep(movementDuration);
+                    if (!speaking) {
+                        return;
+                    }
+
+                    view.say("Finish there, it's Qi Gong time!");
+                    sleep(5000);
+                    if (!speaking) {
+                        return;
+                    }
                 }
 
                 int count = 0;

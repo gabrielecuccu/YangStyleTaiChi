@@ -169,4 +169,9 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
         String number = PreferenceManager.getDefaultSharedPreferences(this).getString("RANDOM_NUMBER_OF_MOVEMENTS", "10");
         return Integer.parseInt(number);
     }
+
+    @Override
+    public boolean getAddWarmUpToAllSets() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_WARM_UP_TO_ALL_SETS", false);
+    }
 }

@@ -37,4 +37,6 @@ public interface MovementSetActivityView {
     boolean getSuggestTenPrinciples();
 
     int getNumberOfMovements();
+
+    boolean getAddWarmUpToAllSets();
 }
