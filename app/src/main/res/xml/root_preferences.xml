@@ -35,6 +35,7 @@
 
         <SwitchPreferenceCompat
             app:key="ADD_WARM_UP_TO_RANDOM"
+            app:defaultValue="false"
             app:title="Add Warm Up exercises" />
 
         <SwitchPreferenceCompat
