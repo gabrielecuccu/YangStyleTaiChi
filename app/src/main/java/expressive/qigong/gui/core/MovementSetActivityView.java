@@ -39,4 +39,8 @@ public interface MovementSetActivityView {
     int getNumberOfMovements();
 
     boolean getAddWarmUpToAllSets();
+
+    void keepScreenOn();
+
+    void clearKeepScreenOn();
 }

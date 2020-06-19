@@ -127,6 +127,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
     }
 
     private void startSpeaking() {
+        view.keepScreenOn();
+
         int movementDuration = view.getMovementDuration() * 1000;
         int halfMovementDuration = (movementDuration - 10000) / 2;
 
@@ -245,6 +247,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
         view.setSpeakButtonText("Speak");
         view.hideProgress();
+        view.clearKeepScreenOn();
     }
 
     private void sleep(long millis) {

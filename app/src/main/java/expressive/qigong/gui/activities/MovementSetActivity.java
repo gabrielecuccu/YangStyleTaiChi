@@ -174,4 +174,14 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     public boolean getAddWarmUpToAllSets() {
         return PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ADD_WARM_UP_TO_ALL_SETS", false);
     }
+
+    @Override
+    public void keepScreenOn() {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+
+    @Override
+    public void clearKeepScreenOn() {
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
 }
