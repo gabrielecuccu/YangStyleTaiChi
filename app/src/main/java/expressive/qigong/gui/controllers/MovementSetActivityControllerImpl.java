@@ -1,5 +1,9 @@
 package expressive.qigong.gui.controllers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -156,20 +160,26 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     }
 
                     view.say("As usual, let's start with swinging arms");
-                    sleep(movementDuration);
+                    sleep(100 * 1000);
                     if (!speaking) {
                         return;
                     }
 
-                    int randomIndex = new Random().nextInt(warmUps.length);
-                    String text = warmUps[randomIndex];
-                    view.say("When you are ready, switch to " + text);
-                    sleep(movementDuration);
+                    List<String> randomWarmUps = Arrays.asList(warmUps);
+                    Collections.shuffle(randomWarmUps);
+                    view.say("When you are ready, switch to " + randomWarmUps.get(0));
+                    sleep(100 * 1000);
                     if (!speaking) {
                         return;
                     }
 
-                    view.say("Finish there, it's Qi Gong time!");
+                    view.say("When you are ready, switch to " + randomWarmUps.get(1));
+                    sleep(100 * 1000);
+                    if (!speaking) {
+                        return;
+                    }
+
+                    view.say("Finish there, it's Chee Gong time!");
                     sleep(5000);
                     if (!speaking) {
                         return;
