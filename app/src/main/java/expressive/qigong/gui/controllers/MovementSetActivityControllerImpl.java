@@ -55,8 +55,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
     };
 
     private String[] dantienSentences = new String[] {
-            "Close your eyes. Dantien breathing",
-            "Put your hands on your Dantien",
+            "Close your eyes. Dan tien breathing",
+            "Close your eyes. Put your hands on your Dan tien",
             "Finish there. Dantien breating",
             "Dantien breathing"
     };
@@ -221,20 +221,48 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     }
                 }
 
+                // start fading out
+                view.setMediaPlayerVolume(0.3f);
+
                 // Say to dantien breathing
                 int randomIndex = new Random().nextInt(dantienSentences.length);
                 String text = dantienSentences[randomIndex];
                 view.say(text);
-                sleep(15000);
+                sleep(10000);
                 if (!speaking) {
                     return;
                 }
+
+                // fade out
+                view.setMediaPlayerVolume(0.20f);
+                sleep(10000);
+                if (!speaking) {
+                    return;
+                }
+
+                // fade out
+                view.setMediaPlayerVolume(0.1f);
 
                 // Say the set is finished
                 randomIndex = new Random().nextInt(finishSentences.length);
                 text = finishSentences[randomIndex];
                 view.say(text);
                 sleep(5000);
+                if (!speaking) {
+                    return;
+                }
+
+                // fade out
+                view.setMediaPlayerVolume(0.05f);
+                sleep(2000);
+                if (!speaking) {
+                    return;
+                }
+
+                // fade out
+                view.setMediaPlayerVolume(0.025f);
+                sleep(2000);
+
                 stopSpeaking();
             }
         }, 100);

@@ -241,4 +241,11 @@ public class MovementSetActivity extends Activity
             mediaPlayer = null;
         }
     }
+
+    @Override
+    public void setMediaPlayerVolume(float v) {
+        if (mediaPlayer != null) {
+            mediaPlayer.setVolume(v, v);
+        }
+    }
 }

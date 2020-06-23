@@ -47,4 +47,6 @@ public interface MovementSetActivityView {
     void playMusic();
 
     void stopMusic();
+
+    void setMediaPlayerVolume(float v);
 }
