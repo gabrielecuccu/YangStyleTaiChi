@@ -23,6 +23,6 @@ public class WarmUp extends SimpleMovementSet {
 
     @Override
     public boolean canSpeak() {
-        return true;
+        return false;
     }
 }
