@@ -1,6 +1,5 @@
 package expressive.qigong.gui.controllers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -128,10 +127,13 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
         }
 
         view.shutdownTTS();
+        view.stopMusic();
     }
 
     private void startSpeaking() {
         view.keepScreenOn();
+
+        view.playMusic();
 
         int movementDuration = view.getMovementDuration() * 1000;
         int halfMovementDuration = (movementDuration - 10000) / 2;
@@ -258,6 +260,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
         view.setSpeakButtonText("Speak");
         view.hideProgress();
         view.clearKeepScreenOn();
+        view.stopMusic();
     }
 
     private void sleep(long millis) {

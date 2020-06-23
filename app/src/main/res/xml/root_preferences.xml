@@ -19,6 +19,12 @@
             app:defaultValue="true"/>
 
         <SwitchPreferenceCompat
+            app:key="PLAY_MUSIC"
+            app:title="Play music (by Bensound)"
+            app:summary="https://www.bensound.com"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
             app:key="ADD_WARM_UP_TO_ALL_SETS"
             app:defaultValue="false"
             app:title="Add 2 Warm Up exercises before sets" />

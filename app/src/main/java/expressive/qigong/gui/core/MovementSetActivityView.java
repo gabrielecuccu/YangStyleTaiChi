@@ -43,4 +43,8 @@ public interface MovementSetActivityView {
     void keepScreenOn();
 
     void clearKeepScreenOn();
+
+    void playMusic();
+
+    void stopMusic();
 }

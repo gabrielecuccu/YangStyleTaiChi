@@ -1,6 +1,7 @@
 package expressive.qigong.gui.activities;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.text.method.ScrollingMovementMethod;
@@ -23,6 +24,8 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     private TextToSpeech tts;
 
     private final MovementSetActivityController controller = new MovementSetActivityControllerImpl(this);
+
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,5 +186,26 @@ public class MovementSetActivity extends Activity implements TextToSpeech.OnInit
     @Override
     public void clearKeepScreenOn() {
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+
+    @Override
+    public void playMusic() {
+        final boolean shouldPlayMusic =
+                PreferenceManager.getDefaultSharedPreferences(this).getBoolean("PLAY_MUSIC", true);
+
+        if (this.mediaPlayer == null && shouldPlayMusic) {
+            this.mediaPlayer = MediaPlayer.create(this, R.raw.relaxing);
+            this.mediaPlayer.setVolume(0.5f, 0.5f);
+            this.mediaPlayer.start();
+        }
+    }
+
+    @Override
+    public void stopMusic() {
+        if (this.mediaPlayer != null) {
+            this.mediaPlayer.stop();
+            this.mediaPlayer.release();
+            this.mediaPlayer = null;
+        }
     }
 }
