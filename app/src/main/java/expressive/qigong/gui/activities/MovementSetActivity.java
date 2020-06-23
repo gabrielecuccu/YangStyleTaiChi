@@ -200,12 +200,12 @@ public class MovementSetActivity extends Activity
 
     @Override
     public void keepScreenOn() {
-        getWindow().addFlags(FLAG_KEEP_SCREEN_ON);
+        runOnUiThread(() -> getWindow().addFlags(FLAG_KEEP_SCREEN_ON));
     }
 
     @Override
     public void clearKeepScreenOn() {
-        getWindow().clearFlags(FLAG_KEEP_SCREEN_ON);
+        runOnUiThread(() -> getWindow().clearFlags(FLAG_KEEP_SCREEN_ON));
     }
 
     @Override
