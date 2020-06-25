@@ -222,6 +222,14 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 }
 
                 // start fading out
+                view.setMediaPlayerVolume(0.4f);
+                view.say("That was the last movement");
+                sleep(5000);
+                if (!speaking) {
+                    return;
+                }
+
+                // start fading out
                 view.setMediaPlayerVolume(0.3f);
 
                 // Say to dantien breathing
