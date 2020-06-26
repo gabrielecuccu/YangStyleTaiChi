@@ -56,7 +56,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
     private String[] dantienSentences = new String[] {
             "Close your eyes. Dan tien breathing",
-            "Close your eyes. Put your hands on your Dan tien",
+            "Close your eyes. Place your hands on your Dan tien",
             "Finish there. Dantien breating",
             "Dantien breathing"
     };
