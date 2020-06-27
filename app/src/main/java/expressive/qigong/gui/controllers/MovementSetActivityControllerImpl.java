@@ -30,7 +30,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
             "Yang swimming dragon",
             "Catherine Wheels",
             "Support the Sky",
-            "Fishes in Eight"
+            "Fishes in Eight",
+            "Iron Butterfly"
     };
 
     private String[] lastRepetitionSentences = new String[] {
