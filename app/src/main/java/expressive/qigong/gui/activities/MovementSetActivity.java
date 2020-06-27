@@ -42,7 +42,14 @@ public class MovementSetActivity extends Activity
             R.raw.deepblue,
             R.raw.love,
             R.raw.november,
-            R.raw.slowmotion);
+            R.raw.slowmotion,
+            R.raw.acousticbreeze,
+            R.raw.energy,
+            R.raw.goinghigher,
+            R.raw.highoctane,
+            R.raw.inspire,
+            R.raw.instinct,
+            R.raw.memories);
 
     private int currentMusicIndex = 0;
 
