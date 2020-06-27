@@ -39,7 +39,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
             "a few more repetitions",
             "almost there",
             "almost time for the next one",
-            "make the last few repetitions"
+            "make the last few repetitions",
+            "make this your last one"
     };
 
     private String[] tenPrinciples = new String[] {
