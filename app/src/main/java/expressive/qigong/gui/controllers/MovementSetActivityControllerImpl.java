@@ -213,19 +213,21 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                         return;
                     }
 
-                    // Say it's almost time for the next movement
-                    int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
-                    String text = lastRepetitionSentences[randomIndex];
-                    view.say(text);
-                    sleep(10000);
-                    if (!speaking) {
-                        return;
+                    // If this is not the last movement, say it's almost time for the next movement
+                    if (count != movementSet.size()) {
+                        int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
+                        String text = lastRepetitionSentences[randomIndex];
+                        view.say(text);
+                        sleep(10000);
+                        if (!speaking) {
+                            return;
+                        }
                     }
                 }
 
                 // start fading out
                 view.setMediaPlayerVolume(0.4f);
-                view.say("That was the last movement");
+                view.say("This is the last movement, slowly come to an end and relax your arms.");
                 sleep(5000);
                 if (!speaking) {
                     return;
