@@ -1,9 +1,5 @@
 package expressive.qigong.gui.controllers;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -12,6 +8,12 @@ import expressive.qigong.gui.core.MovementSetActivityView;
 import expressive.qigong.core.movements.Movement;
 import expressive.qigong.core.movements.MovementSet;
 import expressive.qigong.core.movements.MovementSetFactory;
+import expressive.qigong.gui.shuffle.ShuffledDantienSentences;
+import expressive.qigong.gui.shuffle.ShuffledFinishSentences;
+import expressive.qigong.gui.shuffle.ShuffledLastRepetitionSentences;
+import expressive.qigong.gui.shuffle.ShuffledTenPrinciples;
+import expressive.qigong.gui.shuffle.ShuffledWarmUps;
+import expressive.qigong.gui.shuffle.ShuffledWordList;
 
 public class MovementSetActivityControllerImpl implements MovementSetActivityController {
 
@@ -25,54 +27,15 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
     private Thread currentSpeakingThread;
 
-    private String[] warmUps = new String[] {
-            "Yin swimming dragon",
-            "Yang swimming dragon",
-            "Catherine Wheels",
-            "Support the Sky",
-            "Fishes in Eight",
-            "Iron Butterfly"
-    };
+    private ShuffledWordList warmUps = new ShuffledWarmUps();
 
-    private String[] lastRepetitionSentences = new String[] {
-            "ten more seconds",
-            "a few more repetitions",
-            "almost there",
-            "almost time for the next one",
-            "make the last few repetitions",
-            "make this your last one"
-    };
+    private ShuffledWordList lastRepetitionSentences = new ShuffledLastRepetitionSentences();
 
-    private String[] tenPrinciples = new String[] {
-            "remember to suspend the head from the sky",
-            "remember to sink the chest, open the upper back",
-            "remember to loosen the waist",
-            "remember to sink the shoulders, drop the elbows",
-            "remember to distinguish between full and empty",
-            "remember to use will, not strength",
-            "remember to coordinate the upper and lower body",
-            "remember to unify external and internal movements",
-            "remember the unbroken continuity of flow",
-            "remember to seek stillness in movement"
-    };
+    private ShuffledWordList tenPrinciples = new ShuffledTenPrinciples();
 
-    private String[] dantienSentences = new String[] {
-            "Close your eyes. Dan tien breathing",
-            "Close your eyes. Place your hands on your Dan tien",
-            "Finish there. Dantien breating",
-            "Dantien breathing"
-    };
+    private ShuffledWordList dantienSentences = new ShuffledDantienSentences();
 
-    private String[] finishSentences = new String[] {
-            "Open your eyes. Thank you",
-            "Open your eyes. Finished",
-            "Open your eyes. Enjoy the rest of your day",
-            "Open your eyes. I hope you enjoyed this session",
-            "See you next time. Thank you",
-            "Finished. See you next time",
-            "Finished. Thank you.",
-            "Finished. Enjoy the rest of your day"
-    };
+    private ShuffledWordList finishSentences = new ShuffledFinishSentences();
 
     public MovementSetActivityControllerImpl(MovementSetActivityView view) {
         this.view = view;
@@ -169,15 +132,13 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                         return;
                     }
 
-                    List<String> randomWarmUps = Arrays.asList(warmUps);
-                    Collections.shuffle(randomWarmUps);
-                    view.say("When you are ready, switch to " + randomWarmUps.get(0));
+                    view.say("When you are ready, switch to " + warmUps.next());
                     sleep(100 * 1000);
                     if (!speaking) {
                         return;
                     }
 
-                    view.say("When you are ready, switch to " + randomWarmUps.get(1));
+                    view.say("When you are ready, switch to " + warmUps.next());
                     sleep(100 * 1000);
                     if (!speaking) {
                         return;
@@ -203,9 +164,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                     if (mov.hasHint()) {
                         view.say(mov.getHint());
                     } else if (suggestTenPrinciples) {
-                        int randomIndex = new Random().nextInt(tenPrinciples.length);
-                        String principle = tenPrinciples[randomIndex];
-                        view.say(principle);
+                        view.say(tenPrinciples.next());
                     }
 
                     sleep((int) (halfMovementDuration * mov.getDuration()));
@@ -215,9 +174,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
                     // If this is not the last movement, say it's almost time for the next movement
                     if (count != movementSet.size()) {
-                        int randomIndex = new Random().nextInt(lastRepetitionSentences.length);
-                        String text = lastRepetitionSentences[randomIndex];
-                        view.say(text);
+                        view.say(lastRepetitionSentences.next());
                         sleep(10000);
                         if (!speaking) {
                             return;
@@ -227,8 +184,8 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
 
                 // start fading out
                 view.setMediaPlayerVolume(0.4f);
-                view.say("This is the last movement, slowly come to an end and relax your arms.");
-                sleep(5000);
+                view.say("This is the last repetition, slowly come to an end and relax your arms.");
+                sleep(10000);
                 if (!speaking) {
                     return;
                 }
@@ -237,9 +194,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 view.setMediaPlayerVolume(0.3f);
 
                 // Say to dantien breathing
-                int randomIndex = new Random().nextInt(dantienSentences.length);
-                String text = dantienSentences[randomIndex];
-                view.say(text);
+                view.say(dantienSentences.next());
                 sleep(10000);
                 if (!speaking) {
                     return;
@@ -256,9 +211,7 @@ public class MovementSetActivityControllerImpl implements MovementSetActivityCon
                 view.setMediaPlayerVolume(0.1f);
 
                 // Say the set is finished
-                randomIndex = new Random().nextInt(finishSentences.length);
-                text = finishSentences[randomIndex];
-                view.say(text);
+                view.say(finishSentences.next());
                 sleep(5000);
                 if (!speaking) {
                     return;
